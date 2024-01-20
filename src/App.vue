@@ -13,6 +13,7 @@
           temporary
           color="#ff6330"
           width="400"
+          class="myTransition"
       >
         <v-list
             nav
@@ -27,34 +28,51 @@
           </div>
           <v-list-item-group
               v-model="group"
-              class="ml-3"
+              class="ml-3 fadein"
           >
-
+            <v-hover v-slot="{ hover }">
             <v-list-item class="mt-10">
-              <v-list-item-title class="py-5 pl-5" style="font-weight:bold; font-size:40px;">Agriculture</v-list-item-title>
+                  <v-list-item-title  :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Agriculture</v-list-item-title>
             </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-list-item class="mt-5">
+                <v-list-item-title
+                    class="py-3 pl-5"
+                    :class="{ mytransition2: drawer }"
+                    style="font-weight:bold; font-size:40px;"
+                    :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }"
+                    >
+                    Climate
+                    </v-list-item-title>
+              </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
-              <v-list-item-title class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Climate</v-list-item-title>
+              <v-list-item-title class="py-3 pl-5" :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" :class="{ mytransition2: drawer }" style="font-weight:bold; font-size:40px;">Health</v-list-item-title>
             </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
-              <v-list-item-title class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Health</v-list-item-title>
+              <v-list-item-title    :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Justice</v-list-item-title>
             </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
-              <v-list-item-title class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Justice</v-list-item-title>
+              <v-list-item-title    :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Science</v-list-item-title>
             </v-list-item>
-            <v-list-item class="mt-5">
-              <v-list-item-title class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Science</v-list-item-title>
-            </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
               <v-menu offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-list-item-title v-bind="attrs" v-on="on" class="py-3 pl-5 d-flex align-center justify-space-between" style="font-weight:bold; font-size:40px;">
+                  <v-list-item-title   :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }"  :class="{ mytransition2: drawer }" v-bind="attrs" v-on="on" class="py-3 pl-5 d-flex align-center justify-space-between" style="font-weight:bold; font-size:40px;">
                     About
                     <v-icon>mdi mdi-chevron-down</v-icon>
                   </v-list-item-title>
                 </template>
 
-                <v-list color="#ff6330" elevation="0">
+                <v-list color="#ff6330" elevation="0" class="mr-10">
                   <v-list-item v-for="(item, index) in aboutDropdownItems" :key="index">
                     <v-list-item-title @click="handleDropdownItemClick(item)">
                       <h6 style="font-size:20px; font-weight:normal">{{ item }}</h6>
@@ -63,10 +81,11 @@
                 </v-list>
               </v-menu>
             </v-list-item>
+            </v-hover>
           </v-list-item-group>
         </v-list>
         <v-list :style="{ marginTop: menuIsOpen ? '50px' : '0' }">
-          <v-list-item-group>
+          <v-list-item-group class="ml-10">
             <v-list-item>
               <v-list-item-title class="py-3 pl-8" style="font-weight:normal; font-size:20px;">Donate</v-list-item-title>
             </v-list-item>
@@ -126,8 +145,26 @@ export default {
 body,html,h1,h2,h3,h4,div {
   font-family: 'Oswald', sans-serif;
 }
+.myTransition{
+  transition:0.5s;
+}
+.mytransition2{
+  transform:translateX(50px);
+  transition:1s;
+}
+
 .v-menu__content{
   box-shadow: none !important;
+}
+.v-expand-transition-enter-active,
+.v-expand-transition-leave-active {
+  transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+}
+
+.v-expand-transition-enter,
+.v-expand-transition-leave-to {
+  opacity: 0;
+  max-height: 0;
 }
 </style>
 

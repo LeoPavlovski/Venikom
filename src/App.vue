@@ -2,10 +2,39 @@
   <v-app>
     <v-main>
     <v-app-bar
-      elevation="0"
+      elevation="5"
       color="white"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
+      <div style="display:flex; align-items:center; justify-content: center ">
+        <img src="../src/assets/macedonia.png" alt="macedonia" style="width:30px; margin-right:5px;" >
+        <p class="mt-3">Macedonian</p>
+      </div>
+
+      <v-menu offset-y nudge-left="102" >
+        <template v-slot:activator="{ on, attrs }">
+          <v-hover>
+            <template>
+              <v-icon
+                  v-bind="attrs"
+                  v-on="on"
+                  class="mr-6"
+                  style="cursor:pointer;"
+              >
+                mdi mdi-chevron-down
+              </v-icon>
+            </template>
+          </v-hover>
+        </template>
+        <div style="display:flex; margin-top:20px; cursor:pointer;">
+          <img src="../src/assets/alb2.png" alt="albania" style="width:30px; height:40px;" >
+          <p style="margin-left:5px;" class="mt-2">Albanian</p>
+        </div>
+
+      </v-menu>
+
+     <v-icon style="cursor:pointer;">mdi-magnify</v-icon>
     </v-app-bar>
       <v-navigation-drawer
           v-model="drawer"
@@ -32,7 +61,7 @@
           >
             <v-hover v-slot="{ hover }">
             <v-list-item class="mt-10">
-                  <v-list-item-title  :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Agriculture</v-list-item-title>
+                  <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Agriculture</v-list-item-title>
             </v-list-item>
             </v-hover>
             <v-hover v-slot="{ hover }">
@@ -41,7 +70,7 @@
                     class="py-3 pl-5"
                     :class="{ mytransition2: drawer }"
                     style="font-weight:bold; font-size:40px;"
-                    :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }"
+                    :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }"
                     >
                     Climate
                     </v-list-item-title>
@@ -49,24 +78,24 @@
             </v-hover>
             <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
-              <v-list-item-title class="py-3 pl-5" :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" :class="{ mytransition2: drawer }" style="font-weight:bold; font-size:40px;">Health</v-list-item-title>
+              <v-list-item-title class="py-3 pl-5" :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" style="font-weight:bold; font-size:40px;">Health</v-list-item-title>
             </v-list-item>
             </v-hover>
             <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
-              <v-list-item-title    :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Justice</v-list-item-title>
+              <v-list-item-title    :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Justice</v-list-item-title>
             </v-list-item>
             </v-hover>
             <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
-              <v-list-item-title    :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Science</v-list-item-title>
+              <v-list-item-title    :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Science</v-list-item-title>
             </v-list-item>
             </v-hover>
             <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
               <v-menu offset-y>
                 <template v-slot:activator="{ on, attrs }">
-                  <v-list-item-title   :style="{ 'background-color': hover ? 'black' : '#795548' , 'color' :hover? 'white' : 'white' }"  :class="{ mytransition2: drawer }" v-bind="attrs" v-on="on" class="py-3 pl-5 d-flex align-center justify-space-between" style="font-weight:bold; font-size:40px;">
+                  <v-list-item-title   :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }"  :class="{ mytransition2: drawer }" v-bind="attrs" v-on="on" class="py-3 pl-5 d-flex align-center justify-space-between" style="font-weight:bold; font-size:40px;">
                     About
                     <v-icon>mdi mdi-chevron-down</v-icon>
                   </v-list-item-title>
@@ -129,6 +158,10 @@ export default {
      drawer: false,
     group: null,
     aboutDropdownItems: ['Mission', 'People', 'Volunteer', 'Contact'],
+    countryOptions: [
+      { value: 'macedonia', text: 'Macedonia', image: require('@/assets/macedonia.png') },
+      // Add more countries as needed
+    ],
     menuIsOpen:false,
   }),
   methods:{

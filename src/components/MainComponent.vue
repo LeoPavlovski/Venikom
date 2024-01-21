@@ -90,8 +90,7 @@
             class="d-flex"
             :class="{ 'd-flex': $vuetify.breakpoint.mdAndDown }"
         />
-
-        <div v-if="index === 1">
+        <div v-if="index === 0">
           <div class="mt-5">
             <h6 style="font-size:20px;">
               Reported | Agriculture
@@ -99,6 +98,26 @@
             <h6 style="font-size:25px; color:black;margin-bottom:30px;" class="mt-5 wordTransition">8 Alternative Protein <br> Market Predictions for 2024</h6>
             <h6 style="font-size:15px;">By Björn Ólafsson</h6>
             <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
+          </div>
+        </div>
+        <div v-if="index === 1">
+          <div class="mt-5">
+
+            <h6 style="font-size:20px;">
+              Reported | Agriculture
+            </h6>
+            <h6 style="font-size:25px; color:black; margin-bottom:30px;" class="mt-5 wordTransition">8 Alternative Protein <br> Market Predictions for 2024</h6>
+            <h6 style="font-size:15px;">By Björn Ólafsson</h6>
+            <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
+            <img src="https://placekitten.com/800/400" alt="Random Image" class="img-fluid" style="  width: 100%; max-height: 400px; object-fit: cover;">
+            <h6 style="font-size:20px;">
+              Analysis
+              |
+              Health
+            </h6>
+            <h6 style="font-size:25px; color:black; margin-bottom:30px;" class="mt-5 wordTransition">Vegan Documentaries Like ‘You Are What You Eat’ Seem Damned If They Do or Don’t</h6>
+            <h6 style="font-size:15px;">By Jessica Scott-Reid</h6>
+            <h6 style="font-size:15px;">January 17, 2024 - 5 min read</h6>
           </div>
         </div>
         <div v-if="index === 2">
@@ -112,6 +131,17 @@
             <h6 style="font-size:15px;">By Björn Ólafsson</h6>
             <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
           </div>
+          <div class="mt-5">
+            <h6 style="font-size:20px;">
+              Explainer
+              |
+              Health
+            </h6>
+            <h6 style="font-size:25px; color:black;margin-bottom:30px;" class="mt-5 wordTransition">Colostrum Claims To Be a <br> Superfood — But It’s Meant for Newborn Calves</h6>
+            <h6 style="font-size:15px;">By Björn Ólafsson</h6>
+            <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
+          </div>
+
         </div>
       </v-col>
     </v-row>
@@ -132,7 +162,7 @@ export default defineComponent({
       images: [
         { src: 'https://sentientmedia.org/wp-content/uploads/2021/02/Story-Images-77-740x600.png' },
         { src: 'https://sentientmedia.org/wp-content/uploads/2024/01/Story-Images-76-370x230.png' },
-        { src: 'https://sentientmedia.org/wp-content/uploads/2024/01/Story-Images-74-370x230.png' }
+        { src: 'https://sentientmedia.org/wp-content/uploads/2024/01/Story-Images-74-370x230.png' },
       ]
     }
   },

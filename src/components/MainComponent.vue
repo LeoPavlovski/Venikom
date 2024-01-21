@@ -109,7 +109,7 @@
             <h6 style="font-size:25px; color:black; margin-bottom:30px;" class="mt-5 wordTransition">8 Alternative Protein <br> Market Predictions for 2024</h6>
             <h6 style="font-size:15px;">By Björn Ólafsson</h6>
             <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
-            <img src="https://placekitten.com/800/400" alt="Random Image" class="img-fluid" style="  width: 100%; max-height: 400px; object-fit: cover;">
+            <img src="https://placekitten.com/800/400" alt="Random Image" class="img-fluid" style="  width: 100%; max-height: 500px; object-fit: cover; ">
             <h6 style="font-size:20px;">
               Analysis
               |
@@ -145,18 +145,21 @@
         </div>
       </v-col>
     </v-row>
-
+    <cards-component></cards-component>
 
 
   </div>
 </template>
 
 <script>
-
+import CardsComponent from './CardsComponent.vue'
 import vuetify from "@/plugins/vuetify";
 import {defineComponent} from "vue";
 
 export default defineComponent({
+  components:{
+  CardsComponent
+  },
   data(){
     return{
       images: [

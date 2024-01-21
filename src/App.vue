@@ -42,13 +42,11 @@
           v-model="drawer"
           absolute
           temporary
-          app
           color="#ff6330"
           width="450"
           style="z-index:2"
           class="myTransition"
           mobile-breakpoint="1"
-          floating
       >
         <v-list
             nav

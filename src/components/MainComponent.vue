@@ -147,6 +147,7 @@
     </v-row>
     <cards-component></cards-component>
     <agriculture-component></agriculture-component>
+    <science-component></science-component>
 
 
   </div>
@@ -157,9 +158,11 @@ import CardsComponent from './CardsComponent.vue'
 import AgricultureComponent from './AgricultureComponent.vue'
 import vuetify from "@/plugins/vuetify";
 import {defineComponent} from "vue";
+import ScienceComponent from "@/components/ScienceComponent.vue";
 
 export default defineComponent({
   components:{
+    ScienceComponent,
   CardsComponent,
     AgricultureComponent
   },
@@ -181,7 +184,7 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 .wordTransition {
   background: linear-gradient(#ff6330, #ff6330) left no-repeat, black;
   background-size: 0% 100%;

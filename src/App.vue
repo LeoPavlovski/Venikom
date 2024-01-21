@@ -182,7 +182,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
-body,html,h1,h2,h3,h4,div {
+body,html,h1,h2,h3,h4,div,span {
   font-family: 'Oswald', sans-serif;
 }
 .myTransition{

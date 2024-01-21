@@ -54,7 +54,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .darker-overlay {
   position: relative;
   width: 100%;

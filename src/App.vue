@@ -5,7 +5,7 @@
       elevation="5"
       color="white"
       elevate-on-scroll
-      style="position:sticky; top:0;left:0;width:100%;"
+      style="position:sticky; top:0;left:0;width:100%; z-index:1"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
@@ -45,6 +45,7 @@
           app
           color="#ff6330"
           width="450"
+          style="z-index:2"
           class="myTransition"
           mobile-breakpoint="1"
           floating
@@ -55,7 +56,7 @@
             flat
         >
           <div class="d-flex align-center justify-space-between">
-            <v-list-item>
+            <v-list-item  >
                 <img src="https://sentientmedia.org/wp-content/uploads/2020/07/sentient-logo.png" style="width:130px;" class="mt-3">
             </v-list-item>
             <v-spacer></v-spacer>

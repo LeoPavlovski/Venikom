@@ -4,6 +4,8 @@
     <v-app-bar
       elevation="5"
       color="white"
+      elevate-on-scroll
+      style="position:sticky; top:0;left:0;width:100%;"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
@@ -144,16 +146,20 @@
               <v-icon color="black">mdi mdi-linkedin</v-icon>
             </v-list-item>
           </div>
-
         </v-list>
       </v-navigation-drawer>
+      <main-component></main-component>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
+import MainComponent from './components/MainComponent.vue'
 export default {
+  components:{
+    MainComponent
+  },
+
   data: () => ({
      drawer: false,
     group: null,

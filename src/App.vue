@@ -52,6 +52,7 @@
         <v-list
             nav
             dense
+            flat
         >
           <div class="d-flex align-center justify-space-between">
             <v-list-item>

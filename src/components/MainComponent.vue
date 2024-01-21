@@ -146,6 +146,7 @@
       </v-col>
     </v-row>
     <cards-component></cards-component>
+    <agriculture-component></agriculture-component>
 
 
   </div>
@@ -153,12 +154,14 @@
 
 <script>
 import CardsComponent from './CardsComponent.vue'
+import AgricultureComponent from './AgricultureComponent.vue'
 import vuetify from "@/plugins/vuetify";
 import {defineComponent} from "vue";
 
 export default defineComponent({
   components:{
-  CardsComponent
+  CardsComponent,
+    AgricultureComponent
   },
   data(){
     return{

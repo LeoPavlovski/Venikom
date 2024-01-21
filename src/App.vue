@@ -11,7 +11,6 @@
       <v-spacer></v-spacer>
       <div style="display:flex; align-items:center; justify-content: center ">
         <img src="../src/assets/macedonia.png" alt="macedonia" style="width:30px; margin-right:5px;" >
-        <p class="mt-3">Macedonian</p>
       </div>
 
       <v-menu offset-y nudge-left="102" >
@@ -29,9 +28,8 @@
             </template>
           </v-hover>
         </template>
-        <div style="display:flex; margin-top:20px; cursor:pointer;">
-          <img src="../src/assets/alb2.png" alt="albania" style="width:30px; height:40px;" >
-          <p style="margin-left:5px;" class="mt-2">Albanian</p>
+        <div style="display:flex; margin-top:20px; cursor:pointer;" class="ml-15">
+<!--          <img src="../src/assets/alb2.png" alt="albania" style="width:40px; height:40px;" >-->
         </div>
 
       </v-menu>

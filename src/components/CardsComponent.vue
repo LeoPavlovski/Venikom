@@ -25,10 +25,12 @@
                 Explainer | Health
               </h6>
               <h6  style="font-size:25px;  margin-bottom:30px; color:white " class="mt-5">Plant-Based Meat:<br>Healthy Option or Vegan<br>Junk Food?</h6>
-              <h6  style="font-size:20px; font-weight:normal; color:white; max-width:70%; ">Plant-based meat comes in many forms, some healthier than others.</h6>
-              <h6  style="font-size:20px; font-weight:normal; color:white  " class="mt-3">By <strong>Tracy Keeling</strong></h6>
-              <h6   style="font-size:20px; font-weight:normal; color:white; " class="mt-3">November 14, 2023 - 5 min read</h6>
-              <v-btn style="margin-top:50px;" outlined color="white">Read More</v-btn>
+              <div v-if="!$vuetify.breakpoint.mdAndDown">
+                <h6  style="font-size:20px; font-weight:normal; color:white; max-width:70%; ">Plant-based meat comes in many forms, some healthier than others.</h6>
+                <h6  style="font-size:20px; font-weight:normal; color:white  " class="mt-3">By <strong>Tracy Keeling</strong></h6>
+                <h6   style="font-size:20px; font-weight:normal; color:white; " class="mt-3">November 14, 2023 - 5 min read</h6>
+                <v-btn style="margin-top:50px;" outlined color="white">Read More</v-btn>
+              </div>
             </div>
           </div>
           </div>

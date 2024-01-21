@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-row class="mt-16">
-      <v-col  md="12" lg="4" sm="12" v-for="image in images" :key="image.src" style="position:relative; cursor:pointer;">
+      <v-col xl="12" lg="4" md="4" sm="12" xs="12" v-for="image in images" :key="image.src" style="position:relative; cursor:pointer;">
         <div>
-          <img :src="image.src" :style="{ width: '100%', height: $vuetify.breakpoint.mdAndDown ? '100px' : '550px', objectFit: 'cover', overflow: 'hidden' }">
+          <img :src="image.src" :style="{ width: '100%', height: $vuetify.breakpoint.smAndDown ? '400px' : ($vuetify.breakpoint.mdAndDown ? '400px' : '550px'), objectFit: 'cover', overflow: 'hidden' }">
           <div class="layer">
-            <div style="position:absolute;top:10%;left:40px; text-align: left;">
+            <div style="position:absolute;top:10%;left:10px; text-align: left;">
               <h6 style="font-size:20px; color:white; font-weight:normal">
                 Explainer | Health
               </h6>
@@ -13,7 +13,7 @@
               <h6 style="font-size:20px; font-weight:normal; max-width:70%; color:white; ">Plant-based meat comes in many forms, some healthier than others.</h6>
               <h6 style="font-size:20px; font-weight:normal; color:white;" class="mt-3">By <strong>Tracy Keeling</strong></h6>
               <h6 style="font-size:20px; font-weight:normal; color:white;" class="mt-3">November 14, 2023 - 5 min read</h6>
-              <v-btn style="margin-top:100px;" outlined color="white">Read More</v-btn>
+              <v-btn style="margin-top:50px;" outlined color="white">Read More</v-btn>
             </div>
           </div>
         </div>

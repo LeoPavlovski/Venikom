@@ -45,6 +45,9 @@
           color="#ff6330"
           width="400"
           class="myTransition"
+          mobile-breakpoint="1"
+          style="height:100vh;"
+          floating
       >
         <v-list
             nav

@@ -3,7 +3,7 @@
       <div class="d-flex align-center justify-center mt-5">
         <img src="https://sentientmedia.org/wp-content/uploads/2020/07/sentient-logo.png" style="width:200px;" class="mt-3">
       </div>
-      <div class="d-flex align-center justify-start mt-15">
+      <div class="d-flex align-center justify-start mt-15" v-if="$vuetify.breakpoint.mdAndUp">
         <v-list-item-group
             v-model="group"
             class="ml-3 fadein d-flex align-center float-start"
@@ -65,6 +65,17 @@
 </template>
 
 <script>
+
+import vuetify from "@/plugins/vuetify";
+import {defineComponent} from "vue";
+
+export default defineComponent({
+  methods: {
+    vuetify() {
+      return vuetify
+    }
+  }
+})
 
 </script>
 

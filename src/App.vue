@@ -42,6 +42,7 @@
           v-model="drawer"
           absolute
           temporary
+          app
           color="#ff6330"
           width="400"
           class="myTransition"

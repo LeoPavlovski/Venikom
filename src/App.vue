@@ -44,10 +44,9 @@
           temporary
           app
           color="#ff6330"
-          width="400"
+          width="450"
           class="myTransition"
           mobile-breakpoint="1"
-          style="height:100vh;"
           floating
       >
         <v-list

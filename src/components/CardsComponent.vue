@@ -1,11 +1,22 @@
 <template>
-  <div>
-    <v-row class="mt-16">
-      <v-col xl="12" lg="4" md="4" sm="12" xs="12" v-for="image in images" :key="image.src" style="position:relative; cursor:pointer;">
+  <div class="mt-16 d-flex justify-center align-center">
+    <v-row>
+      <v-col
+          v-for="image in images"
+          :key="image.src"
+          cols="12"
+          sm="6"
+          md="4"
+          lg="4"
+          style="position:relative; cursor:pointer;"
+      >
         <div>
-          <img :src="image.src" :style="{ width: '100%', height: $vuetify.breakpoint.smAndDown ? '400px' : ($vuetify.breakpoint.mdAndDown ? '400px' : '550px'), objectFit: 'cover', overflow: 'hidden' }">
+          <img
+              :src="image.src"
+              :style="{ width: '100%', height: $vuetify.breakpoint.smAndDown ? '200px' : '400px', objectFit: 'cover', overflow: 'hidden' }"
+          >
           <div class="layer">
-            <div style="position:absolute;top:10%;left:10px; text-align: left;">
+            <div style="position:absolute;top:10%;left:20px; text-align: left;">
               <h6 style="font-size:20px; color:white; font-weight:normal">
                 Explainer | Health
               </h6>

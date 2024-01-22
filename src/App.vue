@@ -1,42 +1,8 @@
 <template>
   <v-app>
+    <router-view>
     <v-main>
-      <router-view>
-        <v-app-bar
-            elevation="5"
-            color="white"
-            elevate-on-scroll
-            style="position:sticky; top:0;left:0;width:100%; z-index:1"
-        >
-          <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-          <v-spacer></v-spacer>
-          <div style="display:flex; align-items:center; justify-content: center ">
-            <img src="../src/assets/macedonia.png" alt="macedonia" style="width:30px; margin-right:5px;" >
-          </div>
-
-          <v-menu offset-y nudge-left="102" >
-            <template v-slot:activator="{ on, attrs }">
-              <v-hover>
-                <template>
-                  <v-icon
-                      v-bind="attrs"
-                      v-on="on"
-                      class="mr-6"
-                      style="cursor:pointer;"
-                  >
-                    mdi mdi-chevron-down
-                  </v-icon>
-                </template>
-              </v-hover>
-            </template>
-            <div style="display:flex; margin-top:20px; cursor:pointer;" class="ml-15">
-              <!--          <img src="../src/assets/alb2.png" alt="albania" style="width:40px; height:40px;" >-->
-            </div>
-
-          </v-menu>
-
-          <v-icon style="cursor:pointer;">mdi-magnify</v-icon>
-        </v-app-bar>
+      <app-bar-component></app-bar-component>
         <v-navigation-drawer
             v-model="drawer"
             absolute
@@ -65,7 +31,7 @@
             >
               <v-hover v-slot="{ hover }">
                 <v-list-item class="mt-10">
-                  <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Галерија</v-list-item-title>
+                  <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Gallery</v-list-item-title>
                 </v-list-item>
               </v-hover>
               <v-hover v-slot="{ hover }">
@@ -151,16 +117,18 @@
           </v-list>
         </v-navigation-drawer>
         <main-component></main-component>
-      </router-view>
     </v-main>
+  </router-view>
   </v-app>
 </template>
 
 <script>
+import AppBarComponent from './components/AppBarComponent.vue'
 import MainComponent from './components/MainComponent.vue'
 export default {
   components:{
-    MainComponent
+    MainComponent,
+    AppBarComponent
   },
 
   data: () => ({

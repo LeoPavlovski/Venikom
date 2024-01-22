@@ -3,7 +3,7 @@
       <div class="d-flex align-center justify-center">
         <img src="https://sentientmedia.org/wp-content/uploads/2020/07/sentient-logo.png" style="width:200px;" class="mt-3">
       </div>
-      <div class="d-flex align-center justify-start mt-15" v-if="$vuetify.breakpoint.mdAndUp">
+      <div class="d-flex align-center justify-start mt-15">
         <v-list flat>
           <v-list-item-group
               v-model="group"

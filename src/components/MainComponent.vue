@@ -11,11 +11,15 @@
           >
             <v-list-item >
               <v-hover v-slot="{ hover }">
-                <v-list-item-title
-                    style="font-weight:bold; font-size:40px;"
-                    :style="{'color' : hover? '#ff6330' : ''}"
-                    class="wordTransition"
-                >Agriculture</v-list-item-title>
+                <router-link to="/gallery" class="text-decoration-none">
+                  <v-list-item-title
+                      style="font-weight:bold; font-size:40px;"
+                      :style="{'color' : hover? '#ff6330' : ''}"
+                      class="wordTransition"
+                  >Gallery
+                  </v-list-item-title>
+                </router-link>
+
               </v-hover>
 
             </v-list-item>
@@ -148,8 +152,6 @@
     <cards-component></cards-component>
     <agriculture-component></agriculture-component>
     <science-component></science-component>
-
-
   </div>
 </template>
 

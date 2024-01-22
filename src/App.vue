@@ -2,7 +2,6 @@
   <v-app>
     <router-view>
     <v-main>
-      <app-bar-component></app-bar-component>
         <v-navigation-drawer
             v-model="drawer"
             absolute
@@ -123,12 +122,11 @@
 </template>
 
 <script>
-import AppBarComponent from './components/AppBarComponent.vue'
+
 import MainComponent from './components/MainComponent.vue'
 export default {
   components:{
     MainComponent,
-    AppBarComponent
   },
 
   data: () => ({

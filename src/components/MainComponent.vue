@@ -3,14 +3,10 @@
     <v-app-bar
         elevation="5"
         color="white"
-
         style="position:sticky; top:0;left:0;width:100%; z-index:1"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-
-
       <v-spacer></v-spacer>
-
       <v-menu offset-y nudge-left="102" >
         <template v-slot:activator="{ on, attrs }">
           <v-hover>
@@ -61,9 +57,11 @@
             class="ml-3 fadein"
         >
           <v-hover v-slot="{ hover }">
-            <v-list-item class="mt-10">
-              <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Gallery</v-list-item-title>
-            </v-list-item>
+            <router-link to="/gallery" class="text-decoration-none">
+              <v-list-item class="mt-10">
+                <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Галерија</v-list-item-title>
+              </v-list-item>
+            </router-link>
           </v-hover>
           <v-hover v-slot="{ hover }">
             <v-list-item class="mt-5">
@@ -151,7 +149,7 @@
       <div class="d-flex align-center justify-center">
         <img src="https://sentientmedia.org/wp-content/uploads/2020/07/sentient-logo.png" style="width:200px;" class="mt-3">
       </div>
-      <div class="d-flex align-center justify-start mt-15">
+      <div class="d-flex align-center justify-start mt-15" v-if="!$vuetify.breakpoint.mdAndDown">
         <v-list flat>
           <v-list-item-group
               v-model="group"

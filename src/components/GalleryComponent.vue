@@ -2,7 +2,7 @@
   <div>
     <v-app-bar
         elevation="5"
-        color="white"
+        color="#ffefd5"
         elevate-on-scroll
         style="position:sticky; top:0;left:0;width:100%; z-index:1"
     >
@@ -153,7 +153,7 @@
     <div style="background-color:#ffefd5">
       <v-row>
         <v-col cols="12">
-          <v-container>
+          <div style="width:90%;margin:auto">
             <v-row>
               <v-col cols="12">
                 <h6 class="text-left" style="font-size:50px;">Галерија</h6>
@@ -174,13 +174,13 @@
                     <template v-slot:extension>
                       <v-tabs
                           v-model="tab"
-                          align-with-title
+                          hide-slider
                       >
-                        <v-tabs-slider color="black"></v-tabs-slider>
 
-                        <v-tab
+                          <v-tab
                             v-for="item in items"
                             :key="item"
+
                         >
                          <h6 style="font-size:25px;">{{ item }}</h6>
                         </v-tab>
@@ -188,16 +188,20 @@
                     </template>
                   </v-toolbar>
 
-                  <v-tabs-items v-model="tab">
+                  <v-tabs-items v-model="tab" >
                     <v-tab-item
                         v-for="(item, index) in items"
                         :key="item"
+
+
                     >
                       <div v-if="index === 0">
                         <v-card flat>
                           <div class="d-flex align-center">
                             <v-card-text class="py-10" v-text="text0" style="font-size:20px;"></v-card-text>
-                            <v-btn color="primary" outlined>Види Повеќе!</v-btn>
+                            <router-link to="/classA">
+                              <v-btn color="primary" outlined class="mr-2">Види Повеќе!</v-btn>
+                            </router-link>
                           </div>
 
                         </v-card>
@@ -206,7 +210,7 @@
                         <v-card flat>
                           <div class="d-flex align-center">
                           <v-card-text class="py-10" v-text="text1" style="font-size:20px;"></v-card-text>
-                          <v-btn color="primary" style="font-size:20px;" outlined>Види Повеќе!</v-btn>
+                          <v-btn color="primary" outlined class="mr-2">Види Повеќе!</v-btn>
                           </div>
                         </v-card>
                       </div>
@@ -214,7 +218,7 @@
                         <v-card flat>
                           <div class="d-flex align-center">
                           <v-card-text class="py-10" v-text="text2" style="font-size:20px;"></v-card-text>
-                          <v-btn color="primary" outlined>Види Повеќе!</v-btn>
+                          <v-btn color="primary" outlined class="mr-2">Види Повеќе!</v-btn>
                           </div>
                         </v-card>
                       </div>
@@ -222,7 +226,7 @@
                         <v-card flat>
                           <div class="d-flex align-center">
                           <v-card-text class="py-10" v-text="text3" style="font-size:20px;"></v-card-text>
-                          <v-btn color="primary" outlined>Види Повеќе!</v-btn>
+                          <v-btn color="primary" outlined class="mr-2">Види Повеќе!</v-btn>
                           </div>
                         </v-card>
                       </div>
@@ -233,112 +237,115 @@
               </v-col>
 
             </v-row>
+            <div v-if="$vuetify.breakpoint.mdAndDown" class="mt-10">
+            <v-carousel hide-delimiters cycle interval="5000" >
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0064.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                  <!-- Add more images as needed -->
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                  <!-- Add more images as needed -->
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                  <!-- Add more images as needed -->
+                </v-row>
+              </v-carousel-item>
+            </v-carousel>
+              </div>
+            <div v-if="$vuetify.breakpoint.mdAndUp">
+              <v-carousel hide-delimiters cycle interval="5000">
+                <v-carousel-item>
+                  <v-row>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0244.jpg" class="elevation-10" aspect-ratio="1"/>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0245.jpg" class="elevation-10" aspect-ratio="1"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0249.jpg" class="elevation-10" aspect-ratio="1"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0251.jpg" class="elevation-10" aspect-ratio="1"></v-img>
+                    </v-col>
+                  </v-row>
+                </v-carousel-item>
+                <v-carousel-item>
+                  <v-row>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0244.jpg" class="elevation-10" aspect-ratio="1"/>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0245.jpg" class="elevation-10" aspect-ratio="1"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0249.jpg" class="elevation-10" aspect-ratio="1"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0251.jpg" class="elevation-10" aspect-ratio="1"></v-img>
+                    </v-col>
+                  </v-row>
+                </v-carousel-item>
+              </v-carousel>
+              <v-carousel hide-delimiters cycle interval="5000">
+                <v-carousel-item>
+                  <v-row style="cursor:pointer;">
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0064.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0078.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0238.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0243.jpg" class="elevation-10" aspect-ratio="1"></v-img>
+                    </v-col>
+                  </v-row>
+                </v-carousel-item>
+                <v-carousel-item>
+                  <v-row style="cursor:pointer;">
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0263.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0251.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="3">
+                      <v-img src="../../public/venikom slike/IMAG0243.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    </v-col>
+                    <!-- Add more images as needed -->
+                  </v-row>
+                </v-carousel-item>
+              </v-carousel>
+            </div>
 
-            <v-carousel hide-delimiters cycle interval="5000">
-              <v-carousel-item>
-                <v-row style="cursor:pointer;">
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0064.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0078.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0238.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0243.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                </v-row>
-              </v-carousel-item>
-              <v-carousel-item>
-                <v-row style="cursor:pointer;">
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0263.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0251.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0243.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <!-- Add more images as needed -->
-                </v-row>
-              </v-carousel-item>
-            </v-carousel>
-            <v-carousel hide-delimiters cycle interval="5000">
-              <v-carousel-item>
-                <v-row>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0244.jpg" class="elevation-10" aspect-ratio="1"/>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0245.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0249.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0251.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                </v-row>
-              </v-carousel-item>
-              <v-carousel-item>
-                <v-row>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0244.jpg" class="elevation-10" aspect-ratio="1"/>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0245.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0249.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0251.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                </v-row>
-              </v-carousel-item>
-            </v-carousel>
-            <v-carousel hide-delimiters cycle interval="5000">
-              <v-carousel-item>
-                <v-row style="cursor:pointer;">
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0064.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0078.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0238.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0243.jpg" class="elevation-10" aspect-ratio="1"></v-img>
-                  </v-col>
-                </v-row>
-              </v-carousel-item>
-              <v-carousel-item>
-                <v-row style="cursor:pointer;">
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0263.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0251.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0243.jpg" aspect-ratio="1" class="elevation-10"></v-img>
-                  </v-col>
-                  <!-- Add more images as needed -->
-                </v-row>
-              </v-carousel-item>
-            </v-carousel>
-          </v-container>
+
+          </div>
         </v-col>
       </v-row>
     </div>
@@ -358,14 +365,19 @@
         >
           <v-card-text>
             <v-btn
-                v-for="icon in icons"
+                v-for="(icon,index) in icons"
                 :key="icon"
                 class="mx-4"
                 icon
             >
-              <v-icon size="24px">
-                {{ icon }}
-              </v-icon>
+              <div v-if="index ===  0 ">
+                <router-link to="/">
+                  <v-icon size="24px">
+                    {{ icon }}
+                  </v-icon>
+                </router-link>
+
+              </div>
             </v-btn>
           </v-card-text>
 
@@ -404,17 +416,16 @@ export default {
     items: [
       'Класа А', 'Класа Л', 'Класа М', 'Класа XL'
     ],
-    text0: 'Податоци за јајцата Класа А',
-    text1: 'Податоци за јајцата Класа Л',
-    text2: 'Податоци за јајцата Класа М',
-    text3: 'Податоци за јајцата Класа XL',
+    text0: '"Пробајте ја класата A наша јајца - симбол на свежина и квалитет. Набавете ги сега и уживајте во сочни и вкусни оброци. Вашиот избор за врвен стандард!"',
+    text1: '\n' +
+        '"Откријте ги јајцата од класа L - идеален извор на хранливи супстанци. Со висок стандард на квалитет, овие јајца се прекрасен избор за здрава и вкусна исхрана. Побрзајте и научете зараз!"',
+    text2: '"Испробајте ги јајцата од класа M - совршен избор за економична исхрана. Споделете го вкусот на квалитетни јајца по достапни цени. Вкусни и практични за вашата кујна!"',
+    text3: '\n' +
+        '"Освежете ја вашата исхрана со јајцата од класа XL - големи, сочни и богати со протеини. Изберете врвен стандард за вкус и квалитет за вашето здравје и уживајте во оброците."',
     menuIsOpen:false,
     icons: [
-      'mdi-home',
-      'mdi-email',
-      'mdi-calendar',
-      'mdi-delete',
-    ],
+      'mdi-home'
+        ]
   }),
   methods:{
     openLightbox(index) {
@@ -446,5 +457,7 @@ export default {
 };
 </script>
 <style >
-
+.v-slide-group__prev{
+  display:none !important;
+}
 </style>

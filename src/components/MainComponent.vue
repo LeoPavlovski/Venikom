@@ -3,13 +3,11 @@
     <v-app-bar
         elevation="5"
         color="white"
-        elevate-on-scroll
+
         style="position:sticky; top:0;left:0;width:100%; z-index:1"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-      <router-link to="/gallery">
-        gallery
-      </router-link>
+
 
       <v-spacer></v-spacer>
 
@@ -42,7 +40,7 @@
         temporary
         color="#ff6330"
         width="450"
-        style="z-index:2"
+        style="position: fixed; z-index: 2;"
         class="myTransition"
         mobile-breakpoint="1"
     >
@@ -355,5 +353,8 @@ export default defineComponent({
 .custom-img {
   width: 100%;
   height: auto;
+}
+::v-deep .v-navigation-drawer__content {
+  overflow: hidden
 }
 </style>

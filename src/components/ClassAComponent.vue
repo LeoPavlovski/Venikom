@@ -39,9 +39,9 @@
         v-model="drawer"
         absolute
         temporary
-        color="#ff6330"
+        color="white"
         width="450"
-        style="z-index:2; position:fixed;"
+        style="z-index:100; position:fixed;"
         class="myTransition"
         mobile-breakpoint="1"
 
@@ -290,9 +290,64 @@
           </v-col>
         </v-row>
 
-        </div>
 
         </div>
+      <div style="margin-top:50px;">
+        <h6 style="font-size:40px;">Дистрибуција</h6>
+        <v-row class="d-flex justify-center align-center" align="center">
+          <v-col xs="12" sm="6">
+            <v-img src="../../public/venikom slike/'POCETNA' KOMBE .png" />
+          </v-col>
+          <v-col xs="12" sm="6">
+            <div class="text-h6 black--text font-weight-bold">
+              Дистрибутивни Услуги:
+            </div>
+            <div class="text-body-1 black--text font-weight-medium">
+              Нашиот оптимизиран процес на дистрибуција гарантира дека ќе добиете своите јајца брзо и во оптимална состојба. Користиме добро утврдена мрежа за испорака на свежи јајца на вашата локација со најголема внимателност. Нашата флота за достава е опремена да се справи со нарачки од сите големини, од мали парчиња за индивидуални потрошувачи до големи пратки за бизниси.
+            </div>
+          </v-col>
+        </v-row>
+      </div>
+
+
+        </div>
+    <v-card height="150px">
+      <v-footer
+          class="ma-0 pa-0"
+          absolute
+          v-bind="localAttrs"
+      >
+        <v-card
+            flat
+            tile
+            width="100%"
+            height="150"
+            class="blue lighten-1 text-center"
+        >
+          <v-card-text>
+            <v-btn
+                v-for="(icon,index) in icons"
+                :key="icon"
+                class="mx-4"
+                icon
+            >
+              <div v-if="index ===  0 ">
+                <router-link to="/">
+                  <v-icon size="24px">
+                    {{ icon }}
+                  </v-icon>
+                </router-link>
+
+              </div>
+            </v-btn>
+          </v-card-text>
+          <v-chip light  color="white" style="font-size:20px; cursor:pointer;">Контакт</v-chip>
+          <v-card-text class="white--text mt-5">
+            {{ new Date().getFullYear() }} — <strong>Веником &#169; Сите права се задржани</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
+    </v-card>
   </div>
 </template>
 
@@ -335,25 +390,6 @@ export default {
   height: 100vh;
 }
 
-.image-container {
-  position: relative;
-  width: 100px; /* Adjust the width as needed */
-}
-
-.image {
-  width: 100%;
-  height: auto;
-}
-
-.spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotate 2s linear infinite;
-  width: 50px;
-  height: 50px;
-}
 .logoHover {
   transition:0.5s;
 }

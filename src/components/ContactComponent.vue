@@ -1,13 +1,256 @@
-<script setup>
-
-</script>
-
 <template>
-<div>
+  <div>
+    <div>
+      <v-app-bar
+          elevation="5"
+          color="white"
 
-</div>
+          style="position:sticky; top:0;left:0;width:100%; z-index:1"
+      >
+        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+        <v-spacer></v-spacer>
+        <div style="display:flex; align-items:center; justify-content: center ">
+          <img src="../assets/macedonia.png" alt="macedonia" style="width:30px; margin-right:5px;" >
+        </div>
+
+        <v-menu offset-y nudge-left="102" >
+          <template v-slot:activator="{ on, attrs }">
+            <v-hover>
+              <template>
+                <v-icon
+                    v-bind="attrs"
+                    v-on="on"
+                    class="mr-6"
+                    style="cursor:pointer;"
+                >
+                  mdi mdi-chevron-down
+                </v-icon>
+              </template>
+            </v-hover>
+          </template>
+          <div style="display:flex; margin-top:20px; cursor:pointer;" class="ml-15">
+            <!--          <img src="../src/assets/alb2.png" alt="albania" style="width:40px; height:40px;" >-->
+          </div>
+
+        </v-menu>
+
+        <v-icon style="cursor:pointer;">mdi-magnify</v-icon>
+      </v-app-bar>
+      <v-navigation-drawer
+          v-model="drawer"
+          absolute
+          temporary
+          color="white"
+          width="450"
+          style="z-index:100; position:fixed;"
+          class="myTransition"
+          mobile-breakpoint="1"
+
+      >
+        <v-list
+            nav
+            dense
+            flat
+        >
+          <div class="d-flex align-center justify-space-between">
+            <v-list-item  >
+              <img src="https://sentientmedia.org/wp-content/uploads/2020/07/sentient-logo.png" style="width:130px;" class="mt-3">
+            </v-list-item>
+            <v-spacer></v-spacer>
+            <v-icon @click="drawer=false" color="black" class="mt-1 font-weight-light" style="font-size:30px; cursor:pointer;">mdi mdi-close</v-icon>
+          </div>
+          <v-list-item-group
+              v-model="group"
+              class="ml-3 fadein"
+          >
+            <v-hover v-slot="{ hover }">
+              <router-link to="/" class="text-decoration-none">
+                <v-list-item class="mt-10">
+                  <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Дома</v-list-item-title>
+                </v-list-item>
+              </router-link>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <router-link to="/gallery">
+                <v-list-item class="mt-5">
+                  <v-list-item-title
+                      class="py-3 pl-5"
+                      :class="{ mytransition2: drawer }"
+                      style="font-weight:bold; font-size:40px;"
+                      :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }"
+                  >
+                    Галерија
+                  </v-list-item-title>
+                </v-list-item>
+              </router-link>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-list-item class="mt-5">
+                <v-list-item-title class="py-3 pl-5" :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" style="font-weight:bold; font-size:40px;">Health</v-list-item-title>
+              </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-list-item class="mt-5">
+                <v-list-item-title    :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Justice</v-list-item-title>
+              </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-list-item class="mt-5">
+                <v-list-item-title    :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Science</v-list-item-title>
+              </v-list-item>
+            </v-hover>
+            <v-hover v-slot="{ hover }">
+              <v-list-item class="mt-5">
+                <v-menu offset-y>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-list-item-title   :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }"  :class="{ mytransition2: drawer }" v-bind="attrs" v-on="on" class="py-3 pl-5 d-flex align-center justify-space-between" style="font-weight:bold; font-size:40px;">
+                      About
+                      <v-icon>mdi mdi-chevron-down</v-icon>
+                    </v-list-item-title>
+                  </template>
+
+                  <!--                <v-list color="#ff6330" elevation="0" class="mr-10">-->
+                  <!--                  <v-list-item v-for="(item, index) in aboutDropdownItems" :key="index">-->
+                  <!--                    <v-list-item-title @click="handleDropdownItemClick(item)">-->
+                  <!--                      <h6 style="font-size:20px; font-weight:normal">{{ item }}</h6>-->
+                  <!--                    </v-list-item-title>-->
+                  <!--                  </v-list-item>-->
+                  <!--                </v-list>-->
+                </v-menu>
+              </v-list-item>
+            </v-hover>
+          </v-list-item-group>
+        </v-list>
+        <v-list :style="{ marginTop: menuIsOpen ? '50px' : '0' }">
+          <v-list-item-group class="ml-10">
+            <v-list-item>
+              <v-list-item-title class="py-3 pl-8" style="font-weight:normal; font-size:20px;">Donate</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title class="py-3 pl-8" style="font-weight:normal; font-size:20px;">Food And Farming Media Network</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title class="py-3 pl-8" style="font-weight:normal; font-size:20px;">Sentient Digital Services</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+        <v-list style="margin-top:50px;">
+          <div class="d-flex justify-end px-16">
+            <v-list-item>
+              <v-icon color="black">mdi mdi-facebook</v-icon>
+            </v-list-item>
+            <v-list-item>
+              <v-icon color="black">mdi mdi-twitter</v-icon>
+            </v-list-item>
+            <v-list-item>
+              <v-icon color="black">mdi mdi-youtube</v-icon>
+            </v-list-item>
+            <v-list-item >
+              <v-icon color="black">mdi mdi-instagram</v-icon>
+            </v-list-item>
+            <v-list-item >
+              <v-icon color="black">mdi mdi-linkedin</v-icon>
+            </v-list-item>
+          </div>
+        </v-list>
+      </v-navigation-drawer>
+      <div style="width:90%; margin:auto" class="text-center mt-10">
+        <h6 style="font-size:40px;">Контакт</h6>
+        <h6 style="font-size:20px;">Ние сме овде да одговориме на сите ваши прашања, а исто така <br> ги цениме и вашите коментари и критики</h6>
+        <h4 class="mt-5" style="font-size:20px;">Пополнете го формуларот</h4>
+        <v-card height="400" class="my-15" elevation="10">
+          <v-row>
+            <!-- Contact Information Section -->
+            <v-col cols="12" md="4">
+              <v-card class="pa-2 ml-2 mr-2" color="#09aa8e" height="380">
+                <div class="pa-5 text-left" style="color:white;">
+                  <h6 style="color:white; font-size:24px; font-weight:normal">Информации за контакт</h6>
+                  <p style="color:white;">Сме достапни 24/7 за вас!
+
+                    За сите вашите потреби во врска со Вени-ком, ние сме тука непрекинато. Контактирајте нè преку телефон или е-пошта во секое време на денот и ноќта. Вашето задоволство е наш приоритет!</p>
+
+                  <!-- Phone numbers -->
+                  <div class="d-flex align-center">
+                    <v-icon color="white" class="mr-2">mdi mdi-phone</v-icon>
+                    <div>
+                      <p style="font-size:14px" class="my-0">+389 44 520 805</p>
+                    </div>
+                  </div>
+
+                  <!-- Gmail icon and text -->
+                  <div class="d-flex align-center">
+                    <v-icon color="white" class="mr-2">mdi mdi-gmail</v-icon>
+                    <p style="font-size:14px; margin-top: 12px;">venikom@live.com</p>
+                  </div>
+
+                  <!-- Map marker icon and text -->
+                  <div class="d-flex align-center">
+                    <v-icon color="white" class="mr-2">mdi-map-marker</v-icon>
+                    <p style="font-size:14px; margin-top: 12px;">Ul. 101 B.B., Celopek, Republic of Macedonia</p>
+                  </div>
+                </div>
+              </v-card>
+            </v-col>
+
+            <!-- Contact Form Section -->
+            <v-col cols="12" md="8">
+              <form>
+                <v-row class="d-flex align-center justify-space-between">
+                  <v-col xs="12" sm="6" md="6">
+                    <v-text-field v-model="name" color="#09aa8e" label="Вашето Име" class="px-10"></v-text-field>
+                  </v-col>
+                  <v-col xs="12" sm="6" md="6">
+                    <v-text-field v-model="email" color="#09aa8e" label="Email Адреса" class="px-10"></v-text-field>
+                  </v-col>
+                </v-row>
+
+                <v-textarea v-model="message" color="#09aa8e" no-resize label="Порака" class="px-10"></v-textarea>
+                <v-btn
+                    color="#09aa8e"
+                    style="color:white;"
+                    class="px-10 ml-10 float-left"
+                    :href="getMailtoLink()"
+                >
+                  Испрати Порака!
+                </v-btn>
+              </form>
+
+            </v-col>
+          </v-row>
+        </v-card>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" :style="{ 'margin-top': $vuetify.breakpoint.smAndDown ? '300px' : '0' }" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    </div>
 </template>
 
-<style scoped>
+<script>
+export default{
+  data(){
+    return{
+      drawer:false,
+      name: '',
+      email: '',
+      message: '',
+    }
+  },
+  methods:{
+    getMailtoLink() {
+      const subject = encodeURIComponent('Email Subject'); // Modify the subject as needed
+      const body = encodeURIComponent(`
+        Name: ${this.name}
+        Email: ${this.email}
+        Message: ${this.message}
+      `);
+
+      return `mailto:lp29379@seeu.edu.mk?subject=${subject}&body=${body}`;
+    },
+  },
+}
+</script>
+
+<style>
 
 </style>

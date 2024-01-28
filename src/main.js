@@ -5,13 +5,15 @@ import vuetify from './plugins/vuetify'
 import GalleryComponent from "@/components/GalleryComponent.vue";
 import MainComponent from "@/components/MainComponent.vue";
 import ClassAComponent from "@/components/ClassAComponent.vue";
+import ContactComponent from "@/components/ContactComponent.vue";
 Vue.use(VueRouter);
 Vue.config.productionTip = false
 
 const routes = [
   {path :'/gallery', component : GalleryComponent},
   {path:'/classA',component:ClassAComponent },
-  {path:'/', component:MainComponent}
+  {path:'/', component:MainComponent},
+  {path:'/contact', component:ContactComponent}
 ]
 
 const router = new  VueRouter({

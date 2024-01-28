@@ -308,9 +308,9 @@
           </v-col>
         </v-row>
       </div>
-
-
         </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     <v-card height="150px">
       <v-footer
           class="ma-0 pa-0"
@@ -341,7 +341,9 @@
               </div>
             </v-btn>
           </v-card-text>
-          <v-chip light  color="white" style="font-size:20px; cursor:pointer;">Контакт</v-chip>
+          <router-link to="/contact">
+            <v-chip light  color="white" style="font-size:20px; cursor:pointer;">Контакт</v-chip>
+          </router-link>
           <v-card-text class="white--text mt-5">
             {{ new Date().getFullYear() }} — <strong>Веником &#169; Сите права се задржани</strong>
           </v-card-text>

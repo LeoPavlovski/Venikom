@@ -7,11 +7,13 @@
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
-      <v-btn to="/" text>Дома</v-btn>
-      <v-btn to="/gallery" text>Галерија</v-btn>
-      <v-btn to="/classA" text>Производи</v-btn>
-      <v-btn to="/aboutus" text>За Нас</v-btn>
-      <v-btn to="/contact" text>Контакт</v-btn>
+      <div v-if="!$vuetify.breakpoint.smAndDown">
+        <v-btn to="/" text>Дома</v-btn>
+        <v-btn to="/gallery" text>Галерија</v-btn>
+        <v-btn to="/classA" text>Производи</v-btn>
+        <v-btn to="/aboutus" text>За Нас</v-btn>
+        <v-btn to="/contact" text>Контакт</v-btn>
+      </div>
 
     </v-app-bar>
     <v-navigation-drawer

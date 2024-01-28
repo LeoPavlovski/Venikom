@@ -2,46 +2,25 @@
   <div>
     <v-app-bar
         elevation="5"
-        color="#ffefd5"
-        elevate-on-scroll
+        color="white"
         style="position:sticky; top:0;left:0;width:100%; z-index:1"
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
-      <div style="display:flex; align-items:center; justify-content: center ">
-        <img src="../assets/macedonia.png" alt="macedonia" style="width:30px; margin-right:5px;" >
-      </div>
+      <v-btn to="/" text>Дома</v-btn>
+      <v-btn to="/gallery" text>Галерија</v-btn>
+      <v-btn to="/classA" text>Производи</v-btn>
+      <v-btn to="/aboutus" text>За Нас</v-btn>
+      <v-btn to="/contact" text>Контакт</v-btn>
 
-      <v-menu offset-y nudge-left="102" >
-        <template v-slot:activator="{ on, attrs }">
-          <v-hover>
-            <template>
-              <v-icon
-                  v-bind="attrs"
-                  v-on="on"
-                  class="mr-6"
-                  style="cursor:pointer;"
-              >
-                mdi mdi-chevron-down
-              </v-icon>
-            </template>
-          </v-hover>
-        </template>
-        <div style="display:flex; margin-top:20px; cursor:pointer;" class="ml-15">
-          <!--          <img src="../src/assets/alb2.png" alt="albania" style="width:40px; height:40px;" >-->
-        </div>
-
-      </v-menu>
-
-      <v-icon style="cursor:pointer;">mdi-magnify</v-icon>
     </v-app-bar>
     <v-navigation-drawer
         v-model="drawer"
         absolute
         temporary
-        color="#ff6330"
+        color="white"
         width="450"
-        style="z-index:2"
+        style="position: fixed; z-index: 2;"
         class="myTransition"
         mobile-breakpoint="1"
     >
@@ -51,9 +30,6 @@
           flat
       >
         <div class="d-flex align-center justify-space-between">
-          <v-list-item  >
-            <img src="https://sentientmedia.org/wp-content/uploads/2020/07/sentient-logo.png" style="width:130px;" class="mt-3">
-          </v-list-item>
           <v-spacer></v-spacer>
           <v-icon @click="drawer=false" color="black" class="mt-1 font-weight-light" style="font-size:30px; cursor:pointer;">mdi mdi-close</v-icon>
         </div>
@@ -61,94 +37,85 @@
             v-model="group"
             class="ml-3 fadein"
         >
-            <v-hover v-slot="{ hover }">
-              <router-link to="/" class="text-decoration-none">
-                <v-list-item class="mt-10">
-                  <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Дома</v-list-item-title>
-                </v-list-item>
-              </router-link>
-            </v-hover>
           <v-hover v-slot="{ hover }">
-            <v-list-item class="mt-5">
-              <v-list-item-title
-                  class="py-3 pl-5"
-                  :class="{ mytransition2: drawer }"
-                  style="font-weight:bold; font-size:40px;"
-                  :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }"
-              >
-                Climate
-              </v-list-item-title>
-            </v-list-item>
+            <router-link to="/" class="text-decoration-none">
+              <v-list-item class="mt-10">
+                <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0078c9' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Дома</v-list-item-title>
+              </v-list-item>
+            </router-link>
           </v-hover>
           <v-hover v-slot="{ hover }">
-            <v-list-item class="mt-5">
-              <v-list-item-title class="py-3 pl-5" :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" style="font-weight:bold; font-size:40px;">Health</v-list-item-title>
-            </v-list-item>
+            <router-link to="/gallery" class="text-decoration-none">
+              <v-list-item class="mt-5">
+                <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0078c9' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Галерија</v-list-item-title>
+              </v-list-item>
+            </router-link>
           </v-hover>
           <v-hover v-slot="{ hover }">
-            <v-list-item class="mt-5">
-              <v-list-item-title    :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Justice</v-list-item-title>
-            </v-list-item>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <v-list-item class="mt-5">
-              <v-list-item-title    :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" class="py-3 pl-5" style="font-weight:bold; font-size:40px;">Science</v-list-item-title>
-            </v-list-item>
-          </v-hover>
-          <v-hover v-slot="{ hover }">
-            <v-list-item class="mt-5">
-              <v-menu offset-y>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-list-item-title   :style="{ 'background-color': hover ? 'white' : '#0D47A1' , 'color' :hover? '#0D47A1' : 'white' }"  :class="{ mytransition2: drawer }" v-bind="attrs" v-on="on" class="py-3 pl-5 d-flex align-center justify-space-between" style="font-weight:bold; font-size:40px;">
-                    About
-                    <v-icon>mdi mdi-chevron-down</v-icon>
-                  </v-list-item-title>
-                </template>
+            <router-link to="/classA">
+              <v-list-item class="mt-5">
+                <v-list-item-title
+                    class="py-3 pl-5"
+                    :class="{ mytransition2: drawer }"
+                    style="font-weight:bold; font-size:40px;"
+                    :style="{ 'background-color': hover ? 'white' : '#0078c9' , 'color' :hover? '#0078c9' : 'white' }"
+                >
+                  Производи
+                </v-list-item-title>
+              </v-list-item>
+            </router-link>
 
-                <v-list color="#ff6330" elevation="0" class="mr-10">
-                  <v-list-item v-for="(item, index) in aboutDropdownItems" :key="index">
-                    <v-list-item-title @click="handleDropdownItemClick(item)">
-                      <h6 style="font-size:20px; font-weight:normal">{{ item }}</h6>
-                    </v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </v-list-item>
           </v-hover>
-        </v-list-item-group>
-      </v-list>
-      <v-list :style="{ marginTop: menuIsOpen ? '50px' : '0' }">
-        <v-list-item-group class="ml-10">
-          <v-list-item>
-            <v-list-item-title class="py-3 pl-8" style="font-weight:normal; font-size:20px;">Donate</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title class="py-3 pl-8" style="font-weight:normal; font-size:20px;">Food And Farming Media Network</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title class="py-3 pl-8" style="font-weight:normal; font-size:20px;">Sentient Digital Services</v-list-item-title>
-          </v-list-item>
+          <v-hover v-slot="{ hover }">
+            <router-link to="/aboutus">
+              <v-list-item class="mt-5">
+                <v-list-item-title class="py-3 pl-5" :style="{ 'background-color': hover ? 'white' : '#0078c9' , 'color' :hover? '#0D47A1' : 'white' }" :class="{ mytransition2: drawer }" style="font-weight:bold; font-size:40px;">За нас</v-list-item-title>
+              </v-list-item>
+            </router-link>
+
+          </v-hover>
+          <v-hover v-slot="{ hover }">
+            <router-link to="/contact" class="text-decoration-none">
+              <v-list-item class="mt-5">
+                <v-list-item-title   :style="{ 'background-color': hover ? 'white' : '#0078c9' , 'color' :hover? '#0D47A1' : 'white' }"  :class="{ mytransition2: drawer }" v-bind="attrs" v-on="on" class="py-3 pl-5 d-flex align-center justify-space-between" style="font-weight:bold; font-size:40px;">
+                  Контакт
+                  <v-icon>mdi mdi-chevron-down</v-icon>
+                </v-list-item-title>
+              </v-list-item>
+            </router-link>
+          </v-hover>
         </v-list-item-group>
       </v-list>
       <v-list style="margin-top:50px;">
-        <div class="d-flex justify-end px-16">
+        <div class="" style="position:absolute;left:30px;bottom:20%;">
           <v-list-item>
-            <v-icon color="black">mdi mdi-facebook</v-icon>
+            <a href="https://www.facebook.com/venikomdooel" target="_blank" class="social-icon-link">
+              <v-tooltip right color="#0078c9" min-width="200">
+                <template v-slot:activator="{on}">
+                  <v-icon v-on="on" color="#0078c9">mdi mdi-facebook</v-icon>
+                </template>
+                <p class="text-center">Facebook</p>
+              </v-tooltip>
+
+            </a>
           </v-list-item>
           <v-list-item>
-            <v-icon color="black">mdi mdi-twitter</v-icon>
-          </v-list-item>
-          <v-list-item>
-            <v-icon color="black">mdi mdi-youtube</v-icon>
-          </v-list-item>
-          <v-list-item >
-            <v-icon color="black">mdi mdi-instagram</v-icon>
-          </v-list-item>
-          <v-list-item >
-            <v-icon color="black">mdi mdi-linkedin</v-icon>
+            <a href="https://www.google.com/maps/place/Veni+Kom/@41.9475645,20.9840269,17z/data=!3m1!4b1!4m6!3m5!1s0x1353fa2db6a8adb3:0xb8fb0d4c5ebab63d!8m2!3d41.9475606!4d20.9888978!16s%2Fg%2F11r8cm_ks?entry=ttu" target="_blank" class="social-icon-link">
+              <v-tooltip right color="#0078c9" min-width="200">
+                <template v-slot:activator="{on}">
+                  <v-icon v-on="on" color="#0078c9">mdi mdi-map-marker</v-icon>
+                </template>
+                <p class="text-center">Локација</p>
+              </v-tooltip>
+            </a>
           </v-list-item>
         </div>
       </v-list>
+      <v-list-item>
+        <img class="mx-auto" style="width:150px; margin-top:170px;"  src="../../public/venikomlogo.png"/>
+      </v-list-item>
+      <v-list-item>
+      </v-list-item>
     </v-navigation-drawer>
     <div style="background-color:#ffefd5">
       <v-row>
@@ -414,14 +381,14 @@ export default {
     ],
     tab: null,
     items: [
-      'Класа А', 'Класа Л', 'Класа М', 'Класа XL'
+      'Величина А', 'Величина Л', 'Величина М', 'Величина XL'
     ],
-    text0: '"Пробајте ја класата A наша јајца - симбол на свежина и квалитет. Набавете ги сега и уживајте во сочни и вкусни оброци. Вашиот избор за врвен стандард!"',
+    text0: '"Пробајте ја Величината A наша јајца - симбол на свежина и квалитет. Набавете ги сега и уживајте во сочни и вкусни оброци. Вашиот избор за врвен стандард!"',
     text1: '\n' +
-        '"Откријте ги јајцата од класа L - идеален извор на хранливи супстанци. Со висок стандард на квалитет, овие јајца се прекрасен избор за здрава и вкусна исхрана. Побрзајте и научете зараз!"',
-    text2: '"Испробајте ги јајцата од класа M - совршен избор за економична исхрана. Споделете го вкусот на квалитетни јајца по достапни цени. Вкусни и практични за вашата кујна!"',
+        '"Откријте ги јајцата од Величината L - идеален извор на хранливи супстанци. Со висок стандард на квалитет, овие јајца се прекрасен избор за здрава и вкусна исхрана. Побрзајте и научете зараз!"',
+    text2: '"Испробајте ги јајцата од Величината M - совршен избор за економична исхрана. Споделете го вкусот на квалитетни јајца по достапни цени. Вкусни и практични за вашата кујна!"',
     text3: '\n' +
-        '"Освежете ја вашата исхрана со јајцата од класа XL - големи, сочни и богати со протеини. Изберете врвен стандард за вкус и квалитет за вашето здравје и уживајте во оброците."',
+        '"Освежете ја вашата исхрана со јајцата од Величината XL - големи, сочни и богати со протеини. Изберете врвен стандард за вкус и квалитет за вашето здравје и уживајте во оброците."',
     menuIsOpen:false,
     icons: [
       'mdi-home'

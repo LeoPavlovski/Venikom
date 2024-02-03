@@ -117,38 +117,88 @@
   </div>
 
     <div class="mt-10">
-      <v-row class="d-flex justify-center">
-        <v-col cols="12" md="5" lg="3" xl="2">
-          <v-card class="text-center" elevation="5">
-            <v-img src="../../public/venikom slike/za TEHNOLOGIJA U ABOUT US.jpg" width="100%" />
-            <div class="overlay pa-5" >
-              <p class="white--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias blanditiis consectetur doloribus eius error, fuga magni minima natus nobis non, quaerat quis quod, soluta temporibus vitae voluptatem voluptates voluptatum!</p>
+      <v-row>
+        <v-col cols="12" sm="12" md="12" lg="4">
+          <v-card class="d-flex align-center">
+            <div class="flex-grow-1">
+              <img src="../../public/venikom slike/ZA TIM U ABOUT US.jpg" style="width:100%;">
             </div>
-            <p class="text-left ml-2" style="font-size:20px;">Технологија</p>
+            <div class="flex-grow-1" >
+              <v-card-text>
+                Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
+              </v-card-text>
+            </div>
           </v-card>
         </v-col>
-
-        <v-col cols="12" md="2" lg="3" xl="2">
-          <v-card class="text-center" elevation="5">
-            <v-img src="../../public/venikom slike/ZA TIM U ABOUT US.jpg" width="100%" />
-            <div class="overlay pa-5" >
-              <p  class="white--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias blanditiis consectetur doloribus eius error, fuga magni minima natus nobis non, quaerat quis quod, soluta temporibus vitae voluptatem voluptates voluptatum!</p>
+        <v-col cols="12" sm="12" md="12" lg="4">
+          <v-card class="d-flex align-center">
+            <div class="flex-grow-1">
+              <img src="../../public/venikom slike/za TEHNOLOGIJA U ABOUT US.jpg" style="width:100%;">
             </div>
-            <p class="text-left ml-2" style="font-size:20px;">Тим</p>
+            <div class="flex-grow-1" >
+              <v-card-text>
+                Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
+              </v-card-text>
+            </div>
           </v-card>
         </v-col>
-
-        <v-col cols="12" md="2" lg="3" xl="2">
-          <v-card class="text-center" elevation="5">
-            <v-img src="../../public/venikom slike/ZA U ABOUT US ZA 3 KARTA 'CEL'.jpg" width="100%" style="position:relative;" />
-            <div class="overlay pa-5" >
-              <p class="white--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias blanditiis consectetur doloribus eius error, fuga magni minima natus nobis non, quaerat quis quod, soluta temporibus vitae voluptatem voluptates voluptatum!</p>
+        <v-col cols="12" sm="12" md="12" lg="4">
+          <v-card class="d-flex align-center">
+            <div class="flex-grow-1">
+              <img src="../../public/venikom slike/ZA U ABOUT US ZA 3 KARTA 'CEL'.jpg" style="width:100%;">
             </div>
-            <p class="text-left ml-2" style="font-size:20px;">Цел</p>
+            <div class="flex-grow-1" >
+              <v-card-text>
+                Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
+              </v-card-text>
+            </div>
           </v-card>
         </v-col>
       </v-row>
     </div>
+  </div>
+  <div style="margin-top:250px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <v-card>
+      <v-footer
+          class="ma-0 pa-0"
+          absolute
+          v-bind="localAttrs"
+      >
+        <v-card
+            flat
+            tile
+            width="100%"
+            height="150"
+            class="blue lighten-1 text-center"
+        >
+          <v-card-text>
+            <v-btn
+                v-for="(icon,index) in icons"
+                :key="icon"
+                class="mx-4"
+                icon
+            >
+              <div v-if="index ===  0 ">
+                <router-link to="/">
+                  <v-icon size="24px">
+                    {{ icon }}
+                  </v-icon>
+                </router-link>
+
+              </div>
+            </v-btn>
+          </v-card-text>
+          <router-link to="/contact">
+            <v-chip light  color="white" style="font-size:20px; cursor:pointer;">Контакт</v-chip>
+          </router-link>
+          <v-card-text class="white--text mt-5">
+            {{ new Date().getFullYear() }} — <strong>Веником &#169; Сите права се задржани</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
+    </v-card>
   </div>
 </div>
 </template>
@@ -162,7 +212,19 @@ export default{
   },
   methods:{
 
-  }
+  }, computed: {
+    localAttrs () {
+      const attrs = {}
+
+      if (this.variant === 'default') {
+        attrs.absolute = false
+        attrs.fixed = false
+      } else {
+        attrs[this.variant] = true
+      }
+      return attrs
+    },
+  },
 }
 </script>
 

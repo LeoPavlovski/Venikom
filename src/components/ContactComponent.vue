@@ -151,10 +151,10 @@
 
             <!-- Contact Form Section -->
             <v-col cols="12" md="8">
-              <form>
+              <form action="https://formspree.io/f/xnqepdlw" method="POST">
                 <v-row class="d-flex align-center justify-space-between">
                   <v-col xs="12" sm="6" md="6">
-                    <v-text-field v-model="name" color="#09aa8e" label="Вашето Име" class="px-10"></v-text-field>
+                    <v-text-field  v-model="name" color="#09aa8e" label="Вашето Име" class="px-10"></v-text-field>
                   </v-col>
                   <v-col xs="12" sm="6" md="6">
                     <v-text-field v-model="email" color="#09aa8e" label="Email Адреса" class="px-10"></v-text-field>
@@ -163,10 +163,11 @@
 
                 <v-textarea v-model="message" color="#09aa8e" no-resize label="Порака" class="px-10"></v-textarea>
                 <v-btn
+                    type="submit"
                     color="#09aa8e"
                     style="color:white;"
                     class="px-10 ml-10 float-left"
-                    :href="getMailtoLink()"
+                    @click="sendEmail"
                 >
                   Испрати Порака!
                 </v-btn>
@@ -188,21 +189,21 @@ export default{
   data(){
     return{
       drawer:false,
-      name: '',
-      email: '',
-      message: '',
+      name: 'test',
+      email: 'test',
+      message: 'test',
     }
   },
   methods:{
-    getMailtoLink() {
-      const subject = encodeURIComponent('Email Subject'); // Modify the subject as needed
-      const body = encodeURIComponent(`
-        Name: ${this.name}
-        Email: ${this.email}
-        Message: ${this.message}
-      `);
+    sendEmail() {
+      const subject = 'Subject of the email';
+      const body = `Name: ${this.name}%0D%0AEmail: ${this.email}%0D%0AMessage: ${this.message}`;
 
-      return `mailto:lp29379@seeu.edu.mk?subject=${subject}&body=${body}`;
+      console.log(body);
+
+      const mailtoLink = `mailto:lp29379@seeu.edu.mk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      window.location.href = mailtoLink;
     },
   },
 }

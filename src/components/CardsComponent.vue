@@ -4,7 +4,11 @@
     <h5 :style="{marginRight : $vuetify.breakpoint.lgAndUp ? '150px' : ''}" style=" font-size:55px;">Квалитет, иновации и <br> безбедност на храната.</h5>
     <div>
       <p style="font-size:20px;">Во рамките на нашата компанија, ние се посветени на постигнување на висок степен на квалитет, <br> иновации и безбедност на храната. Сме предана организација која ги вградува овие принципи во секој аспект на нашето работење.</p>
-      <v-btn width="200" class="ml-auto mr-auto py-7" color="primary" style="color:white; ">Галерија</v-btn>
+      <router-link to="/gallery">
+        <v-btn width="200" class="ml-auto mr-auto py-7" color="primary" style="color:white; ">Галерија</v-btn>
+      </router-link>
+
+
     </div>
   </div>
   <div style="width:60%; margin:auto;" :style="{width: $vuetify.breakpoint.lgAndDown  ? '100%' : '73%' , margin:$vuetify.breakpoint.lgAndDown ? 'auto' : 'auto'}">
@@ -91,7 +95,8 @@
         <div class="text-center">
           <div class="text-center" style="color:black; font-size:40px;">Име Презиме</div>
           <v-card-text style="color:black; text-align: center; font-size:20px;">
-            Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден. Фармата е лоцирана во исклучително еколошки чиста и здрава средина, во ненаселено место на патот од Челопек кон Брвеница.
+            За Вени Ком ДООЕЛ - Veni Kom DOOEL
+            Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
           </v-card-text>
         </div>
 

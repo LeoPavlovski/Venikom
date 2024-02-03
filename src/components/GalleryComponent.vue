@@ -22,7 +22,7 @@
         temporary
         color="white"
         width="450"
-        style="position: fixed; z-index: 2;"
+        style="position: fixed; z-index: 200;"
         class="myTransition"
         mobile-breakpoint="1"
     >
@@ -110,43 +110,40 @@
       <v-list-item>
       </v-list-item>
     </v-navigation-drawer>
-    <div style="background-color:#ffefd5">
+    <div  >
       <v-row>
         <v-col cols="12">
           <div style="width:90%;margin:auto">
             <v-row>
               <v-col cols="12">
                 <h6 class="text-left" style="font-size:50px;">Галерија</h6>
-                <div class="d-flex">
-                 <p style="font-size:30px;">Одберете го секогаш најдоброто !</p>
-                </div>
                 <v-card>
-                  <v-toolbar
-                      color="blue"
-                      dark
-                      flat
-                  >
+<!--                  <v-toolbar-->
+<!--                      color="blue"-->
+<!--                      dark-->
+<!--                      flat-->
+<!--                  >-->
 
-                    <v-toolbar-title style="font-size:30px;">Различни типови на јајца</v-toolbar-title>
+<!--                    <v-toolbar-title style="font-size:30px;">Различни типови на јајца</v-toolbar-title>-->
 
-                    <v-spacer></v-spacer>
+<!--                    <v-spacer></v-spacer>-->
 
-                    <template v-slot:extension>
-                      <v-tabs
-                          v-model="tab"
-                          hide-slider
-                      >
+<!--                    <template v-slot:extension>-->
+<!--                      <v-tabs-->
+<!--                          v-model="tab"-->
+<!--                          hide-slider-->
+<!--                      >-->
 
-                          <v-tab
-                            v-for="item in items"
-                            :key="item"
+<!--                          <v-tab-->
+<!--                            v-for="item in items"-->
+<!--                            :key="item"-->
 
-                        >
-                         <h6 style="font-size:25px;">{{ item }}</h6>
-                        </v-tab>
-                      </v-tabs>
-                    </template>
-                  </v-toolbar>
+<!--                        >-->
+<!--                         <h6 style="font-size:25px;">{{ item }}</h6>-->
+<!--                        </v-tab>-->
+<!--                      </v-tabs>-->
+<!--                    </template>-->
+<!--                  </v-toolbar>-->
 
                   <v-tabs-items v-model="tab" >
                     <v-tab-item
@@ -209,9 +206,64 @@
               <v-carousel-item>
                 <v-row style="cursor:pointer;">
                   <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    <v-img src="../../public/venikom slike/IMAG0078.jpg" aspect-ratio="1" class="elevation-10"></v-img>
                   </v-col>
-                  <!-- Add more images as needed -->
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0238.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0243.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0244.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0245.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0249.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0252.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0255.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
+                </v-row>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-row style="cursor:pointer;">
+                  <v-col cols="12" sm="6" md="3">
+                    <v-img src="../../public/venikom slike/IMAG0256.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                  </v-col>
                 </v-row>
               </v-carousel-item>
               <v-carousel-item>
@@ -219,15 +271,13 @@
                   <v-col cols="12" sm="6" md="3">
                     <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
                   </v-col>
-                  <!-- Add more images as needed -->
                 </v-row>
               </v-carousel-item>
               <v-carousel-item>
                 <v-row style="cursor:pointer;">
                   <v-col cols="12" sm="6" md="3">
-                    <v-img src="../../public/venikom slike/IMAG0260.jpg" aspect-ratio="1" class="elevation-10"></v-img>
+                    <v-img src="../../public/venikom slike/IMAG0263.jpg" aspect-ratio="1" class="elevation-10"></v-img>
                   </v-col>
-                  <!-- Add more images as needed -->
                 </v-row>
               </v-carousel-item>
             </v-carousel>
@@ -309,46 +359,49 @@
         </v-col>
       </v-row>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <v-card height="150px">
-      <v-footer
-          class="ma-0 pa-0"
-          absolute
-          v-bind="localAttrs"
-      >
-        <v-card
-            flat
-            tile
-            width="100%"
-            height="150"
-            class="blue lighten-1 text-center"
+    <div style="width:100%; margin:auto;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <v-card height="150px">
+        <v-footer
+            class="ma-0 pa-0"
+            absolute
+            v-bind="localAttrs"
         >
-          <v-card-text>
-            <v-btn
-                v-for="(icon,index) in icons"
-                :key="icon"
-                class="mx-4"
-                icon
-            >
-              <div v-if="index ===  0 ">
-                <router-link to="/">
-                  <v-icon size="24px">
-                    {{ icon }}
-                  </v-icon>
-                </router-link>
+          <v-card
+              flat
+              tile
+              width="100%"
+              height="150"
+              class="blue lighten-1 text-center"
+          >
+            <v-card-text>
+              <v-btn
+                  v-for="(icon,index) in icons"
+                  :key="icon"
+                  class="mx-4"
+                  icon
+              >
+                <div v-if="index ===  0 ">
+                  <router-link to="/">
+                    <v-icon size="24px">
+                      {{ icon }}
+                    </v-icon>
+                  </router-link>
 
-              </div>
-            </v-btn>
-          </v-card-text>
-
-          <v-divider></v-divider>
-
-          <v-card-text class="white--text" style="font-size:30px;">
-            {{ new Date().getFullYear() }} — <strong>Веником &#169; Сите права се задржани</strong>
-          </v-card-text>
-        </v-card>
-      </v-footer>
-    </v-card>
+                </div>
+              </v-btn>
+            </v-card-text>
+            <router-link to="/contact">
+              <v-chip light  color="white" style="font-size:20px; cursor:pointer;">Контакт</v-chip>
+            </router-link>
+            <v-card-text class="white--text mt-5">
+              {{ new Date().getFullYear() }} — <strong>Веником &#169; Сите права се задржани</strong>
+            </v-card-text>
+          </v-card>
+        </v-footer>
+      </v-card>
+    </div>
   </div>
 
 </template>
@@ -383,9 +436,6 @@ export default {
     text3: '\n' +
         '"Освежете ја вашата исхрана со јајцата од Величината XL - големи, сочни и богати со протеини. Изберете врвен стандард за вкус и квалитет за вашето здравје и уживајте во оброците."',
     menuIsOpen:false,
-    icons: [
-      'mdi-home'
-        ]
   }),
   methods:{
     openLightbox(index) {

@@ -68,32 +68,29 @@
   </div>
 
   <div class="mt-16" :style="{width: $vuetify.breakpoint.lgAndDown  ? '100%' : '73%' , margin:$vuetify.breakpoint.lgAndDown ? 'auto' : 'auto'}">
-    <h6 class="text-center" style="font-size:40px;">Наши Потрошувачи</h6>
+    <h6 class="text-center" style="font-size:40px; margin-bottom:20px;">Наши Потрошувачи</h6>
     <v-row class="d-flex align-center justify-space-between">
-      <v-col cols="6" sm="2" md="4" lg="2" class="text-center">
-        <v-img src="https://iconape.com/wp-content/png_logo_vector/vero-logo.png" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
+      <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
+        <v-img src="https://iconape.com/wp-content/png_logo_vector/vero-logo.png"  width="300" height="100" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
                class="logoHover mx-auto"></v-img>
       </v-col>
-      <v-col cols="6" sm="2" md="4" lg="2" class="text-center" style="margin:0 !important;">
-        <v-img src="https://visitmacedonia.eu/wp-content/uploads/2019/09/ramstore.jpg" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
+      <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
+        <v-img src="https://visitmacedonia.eu/wp-content/uploads/2019/09/ramstore.jpg" style="cursor:pointer;"  width="300"   :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' , height :$vuetify.breakpoint.xs ? '175px' : '' }"
                class="logoHover mx-auto"></v-img>
       </v-col>
-      <v-col cols="6" sm="2" md="4" lg="2" class="text-center">
-        <v-img src="https://static.wixstatic.com/media/6e4219_6d0605338b6b4bf9a5abfa2ccf8cca06~mv2.png" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
+      <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
+        <v-img src="https://static.wixstatic.com/media/6e4219_6d0605338b6b4bf9a5abfa2ccf8cca06~mv2.png"  width="300" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
                class="logoHover mx-auto"></v-img>
       </v-col>
-      <v-col cols="6" sm="2" md="4" lg="2" class="text-center">
-        <v-img src="https://kariera.mk/uploads/companies/pk8vCJ9s9UaBFsOKOu5dhg-large.jpg" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs  ? '100%' : '100%' }"
+      <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
+        <v-img src="https://kariera.mk/uploads/companies/pk8vCJ9s9UaBFsOKOu5dhg-large.jpg"  width="300" height="200" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs  ? '100%' : '100%' }"
                class="logoHover mx-auto"></v-img>
       </v-col>
     </v-row>
 
   </div>
-  <v-row
-      style="width: 100%; max-width: 1200px; margin: auto;"
-      :style="{ 'flex-direction': $vuetify.breakpoint.lgAndDown ? 'column' : 'row' }"
-  >
-    <div class="d-flex flex-column justify-center text-center my-5" :style="{ 'text-align': $vuetify.breakpoint.lgAndDown ? 'center' : 'left' }">
+  <v-row>
+    <div class="text-center justify-center ml-auto mr-auto my-5">
       <v-img
           src="https://www.psacramento.com/content/images/2021/10/paulo-sacramento.1024x1024-1.jpg"
           class="mx-auto"

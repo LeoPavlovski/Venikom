@@ -23,7 +23,7 @@
         temporary
         color="white"
         width="450"
-        style="position: fixed; z-index: 2;"
+        style="position: fixed; z-index: 2000;"
         class="myTransition"
         mobile-breakpoint="1"
     >

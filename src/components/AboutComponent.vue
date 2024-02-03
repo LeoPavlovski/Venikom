@@ -23,7 +23,7 @@
       temporary
       color="white"
       width="450"
-      style="position: fixed; z-index: 2;"
+      style="position: fixed; z-index: 200;"
       class="myTransition"
       mobile-breakpoint="1"
   >
@@ -155,6 +155,12 @@
           </v-card>
         </v-col>
       </v-row>
+      <div v-if="$vuetify.breakpoint.xs">
+        <img  :style="{marginTop: $vuetify.breakpoint.xs ? '200px' : '0px'}"  style="width:150px;"  src="../../public/venikomlogo.png"/>
+        <div>
+          <p style="color:black;" class="mt-5"> Вени-Ком ДООЕЛ</p>
+         </div>
+      </div>
     </div>
   </div>
   <div style="margin-top:350px;">

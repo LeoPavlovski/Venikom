@@ -155,15 +155,15 @@
           </v-card>
         </v-col>
       </v-row>
-      <div v-if="$vuetify.breakpoint.xs">
-        <img  :style="{marginTop: $vuetify.breakpoint.xs ? '200px' : '0px'}"  style="width:150px;"  src="../../public/venikomlogo.png"/>
+      <div v-if="$vuetify.breakpoint.xs" class="my-5">
+        <img  :style="{marginTop: $vuetify.breakpoint.xs ? '10px' : '0px'}"  style="width:150px;"  src="../../public/venikomlogo.png"/>
         <div>
           <p style="color:black;" class="mt-5"> Вени-Ком ДООЕЛ</p>
          </div>
       </div>
     </div>
   </div>
-  <div style="margin-top:350px;">
+  <div :style="{marginTop: $vuetify.breakpoint.xs  ? '0px' : '360px'}">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
     <v-card>

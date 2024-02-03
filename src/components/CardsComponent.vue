@@ -89,17 +89,25 @@
     </v-row>
 
   </div>
-  <v-row style="width:60%; margin:auto;" :style="{width: $vuetify.breakpoint.lgAndDown  ? '100%' : '33%' , margin:$vuetify.breakpoint.lgAndDown ? 'auto' : 'auto'}">
-      <div class="d-flex flex-column justify-center text-center my-10">
-        <v-img src="https://yourtangoexperts.com/wp-content/uploads/2019/10/GettyImages-1044149594.jpg" class="mx-auto mt-5" width="30%"></v-img>
-        <div class="text-center">
-          <div class="text-center" style="color:black; font-size:40px;">Срѓан Н.</div>
-          <v-card-text style="color:black; text-align: center; font-size:20px;">
-            За Вени Ком ДООЕЛ - Veni Kom DOOEL
-            Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
-          </v-card-text>
-        </div>
+  <v-row
+      style="width: 100%; max-width: 1200px; margin: auto;"
+      :style="{ 'flex-direction': $vuetify.breakpoint.lgAndDown ? 'column' : 'row' }"
+  >
+    <div class="d-flex flex-column justify-center text-center my-5" :style="{ 'text-align': $vuetify.breakpoint.lgAndDown ? 'center' : 'left' }">
+      <v-img
+          src="https://www.psacramento.com/content/images/2021/10/paulo-sacramento.1024x1024-1.jpg"
+          class="mx-auto"
+          width="150"
+          style="border-radius: 50%;"
+      ></v-img>
+      <div>
+        <div style="color: black; font-size: 24px; margin-top: 10px;">Срѓан Н.</div>
+        <v-card-text style="color: black; font-size: 14px; text-align: center;">
+          За Вени Ком ДООЕЛ - Veni Kom DOOEL
+          Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
+        </v-card-text>
       </div>
+    </div>
   </v-row>
 
 </div>

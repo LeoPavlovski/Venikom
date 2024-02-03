@@ -90,18 +90,16 @@
 
   </div>
   <v-row style="width:60%; margin:auto;" :style="{width: $vuetify.breakpoint.lgAndDown  ? '100%' : '33%' , margin:$vuetify.breakpoint.lgAndDown ? 'auto' : 'auto'}">
-      <v-card class="d-flex flex-column justify-center text-center">
+      <div class="d-flex flex-column justify-center text-center my-10">
         <v-img src="https://yourtangoexperts.com/wp-content/uploads/2019/10/GettyImages-1044149594.jpg" class="mx-auto mt-5" width="30%"></v-img>
         <div class="text-center">
-          <div class="text-center" style="color:black; font-size:40px;">Име Презиме</div>
+          <div class="text-center" style="color:black; font-size:40px;">Срѓан Н.</div>
           <v-card-text style="color:black; text-align: center; font-size:20px;">
             За Вени Ком ДООЕЛ - Veni Kom DOOEL
             Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
           </v-card-text>
         </div>
-
-        <v-divider></v-divider>
-      </v-card>
+      </div>
   </v-row>
 
 </div>

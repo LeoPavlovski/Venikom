@@ -189,9 +189,9 @@ export default{
   data(){
     return{
       drawer:false,
-      name: 'test',
-      email: 'test',
-      message: 'test',
+      name: '',
+      email: '',
+      message: '',
     }
   },
   methods:{

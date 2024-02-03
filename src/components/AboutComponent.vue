@@ -118,38 +118,38 @@
 
     <div class="mt-10">
       <v-row>
-        <v-col cols="12" sm="12" md="12" lg="4">
-          <v-card class="d-flex align-center">
-            <div class="flex-grow-1">
+        <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
+          <v-card class="d-flex align-center" style="flex: 1;">
+            <div class="flex-grow-1 ml-2">
               <img src="../../public/venikom slike/ZA TIM U ABOUT US.jpg" style="width:100%;">
             </div>
             <div class="flex-grow-1" >
-              <v-card-text>
+              <v-card-text style="font-size:20px;">
                 Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
               </v-card-text>
             </div>
           </v-card>
         </v-col>
-        <v-col cols="12" sm="12" md="12" lg="4">
-          <v-card class="d-flex align-center">
-            <div class="flex-grow-1">
-              <img src="../../public/venikom slike/za TEHNOLOGIJA U ABOUT US.jpg" style="width:100%;">
+        <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
+          <v-card class="d-flex align-center" style="flex: 1;">
+            <div class="flex-grow-1 ml-2" >
+              <img src="../../public/venikom slike/za TEHNOLOGIJA U ABOUT US.jpg" style="width:100%; height: 100%">
             </div>
-            <div class="flex-grow-1" >
-              <v-card-text>
-                Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
+            <div class="flex-grow-1">
+              <v-card-text style="font-size:20px;">
+                Фармата е лоцирана во исклучително еколошки чиста и здрава средина, во ненаселено место на патот од Челопек кон Брвеница. Вени Ком поседува и класирен центар за сортирање и пакување на јајца, како и сопствена дистрибутивна мрежа која дистрибуира свежи јајца на територијата на Македонија.
               </v-card-text>
             </div>
           </v-card>
         </v-col>
-        <v-col cols="12" sm="12" md="12" lg="4">
-          <v-card class="d-flex align-center">
-            <div class="flex-grow-1">
+        <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
+          <v-card class="d-flex align-center" style="flex: 1;">
+            <div class="flex-grow-1 ml-2">
               <img src="../../public/venikom slike/ZA U ABOUT US ZA 3 KARTA 'CEL'.jpg" style="width:100%;">
             </div>
-            <div class="flex-grow-1" >
-              <v-card-text>
-                Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
+            <div class="flex-grow-1"  >
+              <v-card-text style="font-size:20px;">
+                Во склоп на фармата има и погон за производство на сточна храна за сопствени потреби. Храната со која се храни живината е квалитетна и здрава, редовно се испитува и ги исполнува највисоките стандарди за производство пропишани од надлежните институции.
               </v-card-text>
             </div>
           </v-card>
@@ -157,7 +157,7 @@
       </v-row>
     </div>
   </div>
-  <div style="margin-top:250px;">
+  <div style="margin-top:350px;">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
     <v-card>

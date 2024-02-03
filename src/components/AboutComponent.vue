@@ -89,33 +89,24 @@
         </v-hover>
       </v-list-item-group>
     </v-list>
-    <v-list style="margin-top:50px;">
-      <div class="" style="position:absolute;left:30px;bottom:20%;">
+    <v-list :style="{marginTop  : $vuetify.breakpoint.smAndDown  ? '0px' : '100px'}">
+      <div class="d-flex align-center flex-column">
         <v-list-item>
-          <a href="https://www.facebook.com/venikomdooel" target="_blank" class="social-icon-link">
-            <v-tooltip right color="#0078c9" min-width="200">
-              <template v-slot:activator="{on}">
-                <v-icon v-on="on" color="#0078c9">mdi mdi-facebook</v-icon>
-              </template>
-              <p class="text-center">Facebook</p>
-            </v-tooltip>
-
+          <a href="https://www.facebook.com/venikomdooel" target="_blank">
+            <v-icon v-on="on" color="#0078c9" class="ml-3">mdi mdi-facebook</v-icon>
+            <p>Facebook</p>
           </a>
         </v-list-item>
         <v-list-item>
           <a href="https://www.google.com/maps/place/Veni+Kom/@41.9475645,20.9840269,17z/data=!3m1!4b1!4m6!3m5!1s0x1353fa2db6a8adb3:0xb8fb0d4c5ebab63d!8m2!3d41.9475606!4d20.9888978!16s%2Fg%2F11r8cm_ks?entry=ttu" target="_blank" class="social-icon-link">
-            <v-tooltip right color="#0078c9" min-width="200">
-              <template v-slot:activator="{on}">
-                <v-icon v-on="on" color="#0078c9">mdi mdi-map-marker</v-icon>
-              </template>
-              <p class="text-center">Локација</p>
-            </v-tooltip>
+            <v-icon v-on="on" color="#0078c9" class="ml-3">mdi mdi-map-marker</v-icon>
+            <p class="text-center">Локација</p>
           </a>
         </v-list-item>
       </div>
     </v-list>
     <v-list-item>
-      <img class="mx-auto" style="width:150px; margin-top:170px;"  src="../../public/venikomlogo.png"/>
+      <img :style="{marginTop: $vuetify.breakpoint.smAndDown ?  '0px' : '200px'}" class="mx-auto" style="width:150px;"  src="../../public/venikomlogo.png"/>
     </v-list-item>
     <v-list-item>
     </v-list-item>

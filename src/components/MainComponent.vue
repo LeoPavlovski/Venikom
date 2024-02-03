@@ -111,93 +111,18 @@
       <v-list-item>
       </v-list-item>
     </v-navigation-drawer>
-    <div style="width:90%; margin:auto; padding:50px;">
-      <div class="d-flex align-center justify-center">
-       <img style="width:100px;" src="../../public/VENIKOM POCETNA LOGO 2 VERZIJA.svg" >
+    <div style="width:100%; margin:auto;">
+      <div style="position:relative; text-align:center;">
+        <img src="http://nilethemes.com/kits1/ongla/wp-content/uploads/sites/10/2022/11/slider-1.jpg" style="width: 100%; filter:brightness(50%);" :style="{height  : $vuetify.breakpoint.smAndDown  ? '500px' : 'auto'}" />
+        <div style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); display: flex; flex-direction: column;">
+          <p :style="{fontSize:$vuetify.breakpoint.mdAndDown ? '20px' : '40px'}" style="color:white;">Веником Фарма</p>
+          <p :style="{fontSize: $vuetify.breakpoint.mdAndDown ? '20px' :'40px'}" style="color:white;">Вени-Ком ДООЕЛ<br v-if="$vuetify.breakpoint.smAndDown" > е компанија чија главна дејност  е производство и дистрибуција на свежи конзумни јајца</p>
+          <v-btn width="200" class="ml-auto mr-auto py-7" color="primary" style="color:white; ">Види Производи!</v-btn>
+        </div>
       </div>
-      <v-row>
-        <v-col
-            v-for="(image, index) in images"
-            :key="index"
-            cols="12"
-            md="4"
-            sm="4"
-            xs="12"
-            lg="4"
-            class="mt-15"
-        >
-          <v-img
-              v-if="$vuetify.breakpoint.mdAndUp"
-              style="cursor:pointer;"
-              :src="image.src"
-              :style="{ height: index === 0 ? '400px' : '150px', width: index === 0 ? '100%' : '100%' }"
-              class="d-flex align-center justify-center"
-              :class="{ 'd-none': $vuetify.breakpoint.mdAndUp }"
-          />
-          <v-img
-              v-else
-              style="cursor:pointer;"
-              :src="image.src"
-              height="300px"
-              width="300px"
-              class="d-flex"
-              :class="{ 'd-flex': $vuetify.breakpoint.mdAndDown }"
-          />
-          <div v-if="index === 0">
-            <div class="mt-5">
-              <h6 style="font-size:20px;">
-                Reported | Agriculture
-              </h6>
-              <h6 style="font-size:25px; color:black;margin-bottom:30px;" class="mt-5 wordTransition">8 Alternative Protein <br> Market Predictions for 2024</h6>
-              <h6 style="font-size:15px;">By Björn Ólafsson</h6>
-              <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
-            </div>
-          </div>
-          <div v-if="index === 1">
-            <div class="mt-5">
 
-              <h6 style="font-size:20px;">
-                Reported | Agriculture
-              </h6>
-              <h6 style="font-size:25px; color:black; margin-bottom:30px;" class="mt-5 wordTransition">8 Alternative Protein <br> Market Predictions for 2024</h6>
-              <h6 style="font-size:15px;">By Björn Ólafsson</h6>
-              <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
-              <img src="https://placekitten.com/800/400" alt="Random Image" class="img-fluid" style="  width: 100%; max-height: 500px; object-fit: cover; ">
-              <h6 style="font-size:20px;">
-                Analysis
-                |
-                Health
-              </h6>
-              <h6 style="font-size:25px; color:black; margin-bottom:30px;" class="mt-5 wordTransition">Vegan Documentaries Like ‘You Are What You Eat’ Seem Damned If They Do or Don’t</h6>
-              <h6 style="font-size:15px;">By Jessica Scott-Reid</h6>
-              <h6 style="font-size:15px;">January 17, 2024 - 5 min read</h6>
-            </div>
-          </div>
-          <div v-if="index === 2">
-            <div class="mt-5">
-              <h6 style="font-size:20px;">
-                Explainer
-                |
-                Health
-              </h6>
-              <h6 style="font-size:25px; color:black;margin-bottom:30px;" class="mt-5 wordTransition">Colostrum Claims To Be a <br> Superfood — But It’s Meant for Newborn Calves</h6>
-              <h6 style="font-size:15px;">By Björn Ólafsson</h6>
-              <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
-            </div>
-            <div class="mt-5">
-              <h6 style="font-size:20px;">
-                Explainer
-                |
-                Health
-              </h6>
-              <h6 style="font-size:25px; color:black;margin-bottom:30px;" class="mt-5 wordTransition">Colostrum Claims To Be a <br> Superfood — But It’s Meant for Newborn Calves</h6>
-              <h6 style="font-size:15px;">By Björn Ólafsson</h6>
-              <h6 style="font-size:15px;">January 18, 2024 - 5 min read</h6>
-            </div>
 
-          </div>
-        </v-col>
-      </v-row>
+
       <cards-component></cards-component>
       <agriculture-component></agriculture-component>
       <science-component></science-component>
@@ -257,5 +182,11 @@ export default defineComponent({
 }
 ::v-deep .v-navigation-drawer__content {
   overflow: hidden
+}
+.filter-grayscale{
+  transition:0.5s;
+}
+.filter-grayscale:hover{
+  filter:grayscale(25);
 }
 </style>

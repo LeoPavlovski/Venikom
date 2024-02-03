@@ -115,8 +115,8 @@
       <div style="position:relative; text-align:center;">
         <img src="http://nilethemes.com/kits1/ongla/wp-content/uploads/sites/10/2022/11/slider-1.jpg" style="width: 100%; filter:brightness(50%);" :style="{height  : $vuetify.breakpoint.smAndDown  ? '500px' : 'auto'}" />
         <div style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); display: flex; flex-direction: column;">
-          <p :style="{fontSize:$vuetify.breakpoint.mdAndDown ? '40px' : '40px'}" style="color:white;">Веником Фарма</p>
-          <p :style="{fontSize: $vuetify.breakpoint.mdAndDown ? '30px' :'40px'}" style="color:white;">Вени-Ком ДООЕЛ<br v-if="$vuetify.breakpoint.smAndDown" > е компанија чија главна дејност  е производство и дистрибуција на свежи конзумни јајца</p>
+          <p :style="{fontSize:$vuetify.breakpoint.mdAndDown ? '40px' : '40px'}" style="color:white;">Фарма Веником</p>
+          <p :style="{fontSize:$vuetify.breakpoint.mdAndDown ? '40px' : '40px'}" v-if="$vuetify.breakpoint.mdAndUp"  style="color:white;">Вени-Ком ДООЕЛ<br v-if="$vuetify.breakpoint.smAndDown" > е компанија чија главна дејност  е производство и дистрибуција на свежи конзумни јајца</p>
           <v-btn width="200" class="ml-auto mr-auto py-7" color="primary" style="color:white; ">Види Производи!</v-btn>
         </div>
       </div>

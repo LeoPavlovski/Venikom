@@ -1,43 +1,68 @@
 <template>
-  <div class="mt-16 d-flex justify-center align-center">
+<div>
+  <div class="d-flex align-center justify-center " style="margin:130px 0;"  :class="{'flex-column' : $vuetify.breakpoint.mdAndDown , 'text-center' : $vuetify.breakpoint.mdAndDown}">
+    <h5 :style="{marginRight : $vuetify.breakpoint.lgAndUp ? '150px' : ''}" style=" font-size:55px;">Квалитет, иновации и <br> безбедност на храната.</h5>
+    <div>
+      <p style="font-size:20px;">Во рамките на нашата компанија, ние се посветени на постигнување на висок степен на квалитет, <br> иновации и безбедност на храната. Сме предана организација која ги вградува овие принципи во секој аспект на нашето работење.</p>
+      <v-btn width="200" class="ml-auto mr-auto py-7" color="primary" style="color:white; ">Галерија</v-btn>
+    </div>
+  </div>
+  <div style="width:60%; margin:auto;" :style="{width: $vuetify.breakpoint.lgAndDown  ? '100%' : '60%' , margin:$vuetify.breakpoint.lgAndDown ? 'auto' : 'auto'}">
     <v-row>
-      <v-col
-          v-for="image in images"
-          :key="image.src"
-          cols="12"
-          sm="6"
-          md="4"
-          lg="4"
-          style="position:relative; cursor:pointer;"
-      >
-        <div>
-          <div
-              :class="{ 'darker-overlay': $vuetify.breakpoint.mdAndDown }"
-              :style="{ position: 'relative', width: '100%', height: $vuetify.breakpoint.smAndDown ? '200px' : '400px' }"
-          >
-          <img
-              :src="image.src"
-              :style="{ width: '100%', height: $vuetify.breakpoint.smAndDown ? '200px' : '400px', objectFit: 'cover', overflow: 'hidden' }"
-          >
-          <div :class="{'layer': !$vuetify.breakpoint.mdAndDown}">
-            <div style="position:absolute;top:10%;left:20px; text-align: left;">
-              <h6  style="font-size:20px; font-weight:normal; color:white">
-                Explainer | Health
-              </h6>
-              <h6  style="font-size:25px;  margin-bottom:30px; color:white " class="mt-5">Plant-Based Meat:<br>Healthy Option or Vegan<br>Junk Food?</h6>
-              <div v-if="!$vuetify.breakpoint.mdAndDown">
-                <h6  style="font-size:20px; font-weight:normal; color:white; max-width:70%; ">Plant-based meat comes in many forms, some healthier than others.</h6>
-                <h6  style="font-size:20px; font-weight:normal; color:white  " class="mt-3">By <strong>Tracy Keeling</strong></h6>
-                <h6   style="font-size:20px; font-weight:normal; color:white; " class="mt-3">November 14, 2023 - 5 min read</h6>
-                <v-btn style="margin-top:50px;" outlined color="white">Read More</v-btn>
-              </div>
-            </div>
+      <v-col cols="12"
+        sm="12"
+        md="12"
+        lg="4">
+        <v-card elevation="10" class="pa-5">
+          <img src="https://www.freeiconspng.com/thumbs/chicken-png/red-single-chicken-png-8.png" width="100">
+          <p>Живинарска фарма</p>
+          <p>Нашите внимателно одгледани животни се симбол на здравје и виталност, произведувајќи квалитетни јајца и меко месо.</p>
+          <div class="d-flex align-center">
+            <router-link to="/classA">
+              <v-btn style="font-size:20px;" color="primary">Повеќе</v-btn>
+            </router-link>
           </div>
-          </div>
-        </div>
+
+        </v-card>
       </v-col>
+      <v-col cols="12"
+             sm="12"
+             md="12"
+             lg="4">
+        <v-card elevation="10" class="pa-5">
+          <img src="https://static.vecteezy.com/system/resources/previews/025/224/995/original/package-of-eggs-in-storage-from-a-farm-isolated-on-transparent-background-ai-generated-png.png" width="100">
+          <p>Свежи Јајца</p>
+          <p>Вклучете се во нашиот свет на свежи јајца, каде што свако јајце е несомнено израз на прекрасната енергија на нашите кокошки.Откријте ги чистата свежина и вкусот на нашите јајца - едно искуство што го донесува фармата директно на вашиот стол.</p>
+          <div class="d-flex align-center">
+            <router-link to="/classA">
+              <v-btn style="font-size:20px;" color="primary">Повеќе</v-btn>
+            </router-link>
+
+          </div>
+
+        </v-card>
+      </v-col>
+      <v-col cols="12"
+             sm="12"
+             md="12"
+             lg="4">
+        <v-card elevation="10" class="pa-5">
+          <img src="https://i.pinimg.com/736x/e7/5e/63/e75e639702c7b61e86ccfeb44af33f68.jpg" width="100">
+          <p>Пилиња</p>
+          <p>Добредојдовте во светот на нашите малени пиленца - слатки и игриви мали животни кои ја исполнуваат нашата ферма со живост и веселие. Ние се грижиме за нив со посебна внимателност, обезбедувајќи здрава и среќна растежна фаза</p>
+          <div class="d-flex align-center">
+            <router-link to="/classA">
+              <v-btn style="font-size:20px;" color="primary">Повеќе</v-btn>
+            </router-link>
+          </div>
+
+        </v-card>
+      </v-col>
+
+
     </v-row>
   </div>
+</div>
 </template>
 
 <script>

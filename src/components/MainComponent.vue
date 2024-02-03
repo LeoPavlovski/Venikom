@@ -89,7 +89,7 @@
           </v-hover>
         </v-list-item-group>
       </v-list>
-      <v-list style="margin-top:50px;" >
+      <v-list :style="{marginTop  : $vuetify.breakpoint.smAndDown  ? '50px' : '100px'}">
         <div class="d-flex align-center flex-column">
           <v-list-item>
             <a href="https://www.facebook.com/venikomdooel" target="_blank">
@@ -106,7 +106,7 @@
         </div>
       </v-list>
       <v-list-item>
-        <img class="mx-auto" style="width:150px; margin-top:100px;"  src="../../public/venikomlogo.png"/>
+        <img :style="{marginTop: $vuetify.breakpoint.smAndDown ?  '0px' : '200px'}" class="mx-auto" style="width:150px;"  src="../../public/venikomlogo.png"/>
       </v-list-item>
       <v-list-item>
       </v-list-item>

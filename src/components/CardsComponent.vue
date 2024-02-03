@@ -102,9 +102,8 @@
       ></v-img>
       <div>
         <div style="color: black; font-size: 24px; margin-top: 10px;">Срѓан Н.</div>
-        <v-card-text style="color: black; font-size: 14px; text-align: center;">
-          За Вени Ком ДООЕЛ - Veni Kom DOOEL
-          Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
+        <v-card-text style="color: black; font-size: 20px; text-align: center;">
+        Раководител .
         </v-card-text>
       </div>
     </div>

@@ -2,13 +2,25 @@
 <div>
   <div class="d-flex align-center justify-center " style="margin:130px 0;"  :class="{'flex-column' : $vuetify.breakpoint.mdAndDown , 'text-center' : $vuetify.breakpoint.mdAndDown}">
     <h5 :style="{marginRight : $vuetify.breakpoint.lgAndUp ? '150px' : ''}" style=" font-size:55px;">Квалитет, иновации и <br> безбедност на храната.</h5>
-    <div>
-      <p style="font-size:20px;">Во рамките на нашата компанија, ние се посветени на постигнување на висок степен на квалитет, <br> иновации и безбедност на храната. Сме предана организација која ги вградува овие принципи во секој аспект на нашето работење.</p>
-      <router-link to="/gallery">
-        <v-btn width="200" class="ml-auto mr-auto py-7" color="primary" style="color:white; ">Галерија</v-btn>
-      </router-link>
-
-
+    <div style="max-width: 700px;">
+      <v-carousel hide-delimiter-background hide-delimiters show-arrows-on-hover cycle interval="5000" >
+        <div class="d-flex align-center justify-center">
+          <v-carousel-item>
+            <div class="text-center">
+              <p class="subtitle-1 font-weight-bold" style="margin-top:200px;">
+                Во рамките на нашата компанија, ние се посветени на постигнување на висок степен на квалитет, иновации и безбедност на храната. Сме предана организација која ги вградува овие принципи во секој аспект на нашето работење.
+              </p>
+            </div>
+          </v-carousel-item>
+          <v-carousel-item>
+            <div class="text-center">
+              <p class="subtitle-1 font-weight-bold" style="margin-top:200px;">
+                Во оквирите на нашата компанија, ние се посветени на постигнување на висок степен на квалитет, иновации и безбедност на производите. Сме предана организација која ги вградува овие принципи во секој аспект на нашето деловање.
+              </p>
+            </div>
+          </v-carousel-item>
+        </div>
+      </v-carousel>
     </div>
   </div>
   <div style="width:60%; margin:auto;" :style="{width: $vuetify.breakpoint.lgAndDown  ? '100%' : '73%' , margin:$vuetify.breakpoint.lgAndDown ? 'auto' : 'auto'}">
@@ -53,7 +65,7 @@
         <v-card elevation="10" class="pa-5">
           <img src="https://i.pinimg.com/736x/e7/5e/63/e75e639702c7b61e86ccfeb44af33f68.jpg" width="100">
           <p>Пилиња</p>
-          <p>Добредојдовте во светот на нашите малени пиленца - слатки и игриви мали животни кои ја исполнуваат нашата ферма со живост и веселие. Ние се грижиме за нив со посебна внимателност, обезбедувајќи здрава и среќна растежна фаза. Нашите внимателно одгледани животни се симбол на здравје</p>
+          <p>Добредојдовте во светот на нашите малени пиленца - слатки и игриви мали животни кои ја исполнуваат нашата ферма со живост и веселие. Ние се грижиме за нив со посебна внимателност. Нашите внимателно одгледани животни се симбол на здравје</p>
           <div class="d-flex align-center">
             <router-link to="/classA">
               <v-btn style="font-size:20px;" color="primary">Повеќе</v-btn>
@@ -75,11 +87,10 @@
                class="logoHover mx-auto"></v-img>
       </v-col>
       <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
-        <v-img src="https://visitmacedonia.eu/wp-content/uploads/2019/09/ramstore.jpg" style="cursor:pointer;"  width="300"   :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' , height :$vuetify.breakpoint.xs ? '175px' : '' }"
-               class="logoHover mx-auto"></v-img>
+        <v-img src="../../public/montenegro..png" style="cursor:pointer;" width="300" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' , height :$vuetify.breakpoint.xs ? '175px' : '' }"  class="logoHover mx-auto"/>
       </v-col>
       <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
-        <v-img src="https://static.wixstatic.com/media/6e4219_6d0605338b6b4bf9a5abfa2ccf8cca06~mv2.png"  width="300" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
+        <v-img src="https://visitmacedonia.eu/wp-content/uploads/2019/09/ramstore.jpg"  width="300" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
                class="logoHover mx-auto"></v-img>
       </v-col>
       <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
@@ -91,16 +102,14 @@
   </div>
   <v-row>
     <div class="text-center justify-center ml-auto mr-auto my-5">
-      <v-img
-          src="https://www.psacramento.com/content/images/2021/10/paulo-sacramento.1024x1024-1.jpg"
-          class="mx-auto"
-          width="150"
-          style="border-radius: 50%;"
-      ></v-img>
+      <img src="../../public/SRGJAN-N.png" width="200"/>
       <div>
         <div style="color: black; font-size: 24px; margin-top: 10px;">Срѓан Н.</div>
-        <v-card-text style="color: black; font-size: 20px; text-align: center;">
-        Раководител .
+        <div style="color:gray;">Управител</div>
+        <v-card-text style="color: gray; font-size: 16px; text-align: center;">
+          <div >
+            "Нашата мисија е да осигуриме здрава и квалитетна исхрана за нашите кокошки, обезбедувајќи висок стандард на јајцата и грижа за нивната благосостојба."
+          </div>
         </v-card-text>
       </div>
     </div>
@@ -141,6 +150,9 @@ export default {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+.v-responsive__content{
+  display:flex !important;
 }
 .layer{
   background:transparent;

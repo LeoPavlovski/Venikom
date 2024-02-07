@@ -9,7 +9,7 @@
     <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
     <v-spacer></v-spacer>
     <div v-if="!$vuetify.breakpoint.smAndDown">
-      <v-btn to="/" text>Дома</v-btn>
+      <v-btn to="/" text>Почетна</v-btn>
       <v-btn to="/gallery" text>Галерија</v-btn>
       <v-btn to="/classA" text>Производи</v-btn>
       <v-btn to="/aboutus" text>За Нас</v-btn>

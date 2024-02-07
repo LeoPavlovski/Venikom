@@ -8,7 +8,7 @@
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <div v-if="!$vuetify.breakpoint.smAndDown">
-        <v-btn to="/" text>Дома</v-btn>
+        <v-btn to="/" text>Почетна</v-btn>
         <v-btn to="/gallery" text>Галерија</v-btn>
         <v-btn to="/classA" text>Производи</v-btn>
         <v-btn to="/aboutus" text>За Нас</v-btn>
@@ -120,7 +120,7 @@
           <v-col cols="12" sm="6" md="6" class="order-1 order-lg-2 order-xl-2 order-md-2 order-sm-2" >
             <v-card flat>
               <h5 class="pt-10" style="font-size:20px;">
-                Класа А (Величина Л)
+               (Величина Л)
               </h5>
               <h5 style="padding:40px; font-size:18px;">
                 Класа A ја претставува највисоката квалитет на јајца. Овие свежи и здрави производи гарантираат врвен стандард во исхраната, бидејќи се богати со витамини, минерали и висококвалитетни протеини. Изберете Класа A за вкусни и хранливи оброци.
@@ -179,6 +179,20 @@
 
             <v-img src="../../public/venikom slike/proizvodi/a30XL.png"/></v-col>
         </v-row>
+      <v-row class="d-flex justify-center align-center">
+        <v-col cols="12" sm="6" md="6">
+          <img src="../../public/20KOMADAM.png" height="828" width="1234"/></v-col>
+        <v-col cols="12" sm="6" md="6">
+          <v-card flat>
+            <h5 class="pt-10" style="font-size:20px;">
+              Класа А (Величина L)
+            </h5>
+            <h5 style="padding:40px; font-size:18px;">
+              Класа A ја претставува највисоката квалитет на јајца. Овие свежи и здрави производи гарантираат врвен стандард во исхраната, бидејќи се богати со витамини, минерали и висококвалитетни протеини. Изберете Класа A за вкусни и хранливи оброци.
+            </h5>
+          </v-card>
+        </v-col>
+      </v-row>
         <v-btn
             @click="clickedButton"
             class="ma-2"

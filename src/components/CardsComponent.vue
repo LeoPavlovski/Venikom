@@ -87,15 +87,19 @@
                class="logoHover mx-auto"></v-img>
       </v-col>
       <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
-        <v-img src="../../public/montenegro..png" style="cursor:pointer;" width="300" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' , height :$vuetify.breakpoint.xs ? '175px' : '' }"  class="logoHover mx-auto"/>
+        <v-img src="../../public/montenegro..png" style="cursor:pointer;" width="300" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' , height :$vuetify.breakpoint.xs ? '' : '' }"  class="logoHover mx-auto"/>
       </v-col>
       <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
         <v-img src="https://visitmacedonia.eu/wp-content/uploads/2019/09/ramstore.jpg"  width="300" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs ? '100%' : '100%' }"
                class="logoHover mx-auto"></v-img>
       </v-col>
       <v-col cols="12" sm="2" md="4" lg="2" class="text-center">
-        <v-img src="https://kariera.mk/uploads/companies/pk8vCJ9s9UaBFsOKOu5dhg-large.jpg"  width="300" height="200" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs  ? '100%' : '100%' }"
-               class="logoHover mx-auto"></v-img>
+        <v-img src="../../public/venikom slike/proizvodi/logo-1 (2).png" width="300"  style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs  ? '100%' : '100%' }"
+               class="logoHover mx-auto"/>
+      </v-col>
+      <v-col cols="12" sm="2" md="4" lg="2" class="text-center" style="margin-bottom:30px;">
+        <v-img src="../../public/venikom slike/proizvodi/OAZA.png"  width="300" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs  ? '100%' : '100%' }"
+               class="logoHover mx-auto"/>
       </v-col>
     </v-row>
 

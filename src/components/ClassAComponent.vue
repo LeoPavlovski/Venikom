@@ -2,21 +2,21 @@
   <div>
     <v-app-bar
         elevation="5"
-        color="white"
-        style="position:sticky; top:0;left:0;width:100%; z-index:1"
+        color="#0078c9"
+        style=" position:sticky; top:0;left:0;width:100%; z-index:1"
     >
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon style="color:white;" @click="drawer = true"></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <div v-if="!$vuetify.breakpoint.smAndDown">
-        <v-btn to="/" text>Почетна</v-btn>
-        <v-btn to="/gallery" text>Галерија</v-btn>
-        <v-btn to="/classA" text>Производи</v-btn>
-        <v-btn to="/aboutus" text>За Нас</v-btn>
-        <v-btn to="/contact" text>Контакт</v-btn>
+        <v-btn style="color:white;" to="/" text>Почетна</v-btn>
+        <v-btn style="color:white;" to="/gallery" text>Галерија</v-btn>
+        <v-btn style="color:white;" to="/classA" text>Производи</v-btn>
+        <v-btn style="color:white;" to="/aboutus" text>За Нас</v-btn>
+        <v-btn style="color:white;" to="/contact" text>Контакт</v-btn>
       </div>
 
-    </v-app-bar>
-    <v-navigation-drawer
+
+    </v-app-bar>    <v-navigation-drawer
         v-model="drawer"
         absolute
         temporary

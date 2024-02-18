@@ -117,7 +117,7 @@
           <div style="width:90%;margin:auto">
             <v-row>
               <v-col cols="12">
-                <h6 class="text-left my-10" style="font-size:50px;">Галерија</h6>
+                <h6 class="text-left my-10" style="font-size:50px; text-decoration:underline; font-family: 'Roboto'">Галерија</h6>
                 <v-card>
 <!--                  <v-toolbar-->
 <!--                      color="blue"-->

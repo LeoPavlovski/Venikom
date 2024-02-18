@@ -111,7 +111,7 @@
       </v-list-item>
     </v-navigation-drawer>
     <div style="width:90%; margin:auto" class="text-center mt-10">
-      <h6 style="font-size:40px;">Производи</h6>
+      <h6 style="font-size:40px; text-decoration: underline">Производи</h6>
 
         <v-row class="d-flex justify-center align-center">
           <v-col cols="12" sm="6" md="6" class="order-1 order-sm-2">

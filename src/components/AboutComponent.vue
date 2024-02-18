@@ -113,7 +113,7 @@
   </v-navigation-drawer>
   <div style="width:90%; margin:auto" class="text-center" >
   <div class="mt-10">
-    <h2 style="font-size:40px;">За нас</h2>
+    <h2 style="font-size:40px; text-decoration: underline">За нас</h2>
   </div>
 
     <div class="mt-10">

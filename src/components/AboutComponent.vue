@@ -43,7 +43,7 @@
         <v-hover v-slot="{ hover }">
           <router-link to="/" class="text-decoration-none">
             <v-list-item class="mt-10">
-              <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0078c9' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Дома</v-list-item-title>
+              <v-list-item-title  :style="{ 'background-color': hover ? 'white' : '#0078c9' , 'color' :hover? '#0D47A1' : 'white' }" class="py-5 pl-5" :class="{ mytransition2: drawer  }" style="font-weight:bold; font-size:40px;">Почетна</v-list-item-title>
             </v-list-item>
           </router-link>
         </v-hover>

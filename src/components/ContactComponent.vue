@@ -119,7 +119,7 @@
           <v-row>
             <!-- Contact Information Section -->
             <v-col cols="12" md="4">
-              <v-card class="pa-2 ml-2 mr-2" color="#09aa8e" height="380">
+              <v-card class="pa-2 ml-2 mr-2" color="#0078c9" height="380">
                 <div class="pa-5 text-left" style="color:white;">
                   <h6 style="color:white; font-size:24px; font-weight:normal">Информации за контакт</h6>
                   <p style="color:white;">Сме достапни 24/7 за вас!
@@ -154,17 +154,17 @@
               <form>
                 <v-row class="d-flex align-center justify-space-between">
                   <v-col xs="12" sm="6" md="6">
-                    <v-text-field  v-model="name" color="#09aa8e" label="Вашето Име" class="px-10"></v-text-field>
+                    <v-text-field  v-model="name" color="#0078c9" label="Вашето Име" class="px-10"></v-text-field>
                   </v-col>
                   <v-col xs="12" sm="6" md="6">
-                    <v-text-field v-model="email" color="#09aa8e" label="Email Адреса" class="px-10"></v-text-field>
+                    <v-text-field v-model="email" color="#0078c9" label="Email Адреса" class="px-10"></v-text-field>
                   </v-col>
                 </v-row>
 
-                <v-textarea v-model="message" color="#09aa8e" no-resize label="Порака" class="px-10"></v-textarea>
+                <v-textarea v-model="message" color="#0078c9" no-resize label="Порака" class="px-10"></v-textarea>
                 <v-btn
                     type="submit"
-                    color="#09aa8e"
+                    color="#0078c9"
                     style="color:white;"
                     class="px-10 ml-10 float-left"
                     @click="sendEmail"
@@ -177,7 +177,7 @@
           </v-row>
         </v-card>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" :style="{ 'margin-top': $vuetify.breakpoint.smAndDown ? '400px' : '100px' }" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" :style="{ 'margin-top': $vuetify.breakpoint.smAndDown ? '400px' : '150px' }" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
 

@@ -78,7 +78,7 @@
         <v-img src="../../public/venikom slike/proizvodi/logo-1 (2).png" width="300"  style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs  ? '50%' : '100%' }"
                class="logoHover mx-auto"/>
       </v-col>
-      <v-col cols="12" sm="2" md="4" lg="2" class="text-center" style="margin-bottom:100px;">
+      <v-col cols="12" sm="2" md="4" lg="2" class="text-center" style="margin-bottom:20px;">
         <v-img src="../../public/venikom slike/proizvodi/OAZA.png"  width="300" style="cursor:pointer;" :style="{ maxWidth: $vuetify.breakpoint.xs  ? '50%' : '100%' }"
                class="logoHover mx-auto"/>
       </v-col>
@@ -86,7 +86,7 @@
 
   </div>
   <v-row>
-    <div class="text-center justify-center ml-auto mr-auto my-5">
+    <div class="text-center justify-center ml-auto mr-auto" style="margin-top:100px;">
       <img src="../../public/SRGJAN-N.png" width="150"/>
       <div>
         <div style="color: black; font-size: 24px; margin-top: 10px;">Срѓан Н.</div>

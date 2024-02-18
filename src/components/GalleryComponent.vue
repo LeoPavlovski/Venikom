@@ -346,9 +346,9 @@
       </v-row>
     </div>
     <div style="width:100%; margin:auto;">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-      <v-card height="150px">
+<!--      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.454838266546!2d20.986322877285897!3d41.94756456106028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353fa2db6a8adb3%3A0xb8fb0d4c5ebab63d!2sVeni%20Kom!5e0!3m2!1sen!2smk!4v1705958666206!5m2!1sen!2smk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">-->
+<!--      </iframe>-->
+
         <v-footer
             class="ma-0 pa-0"
             absolute
@@ -359,34 +359,18 @@
               tile
               width="100%"
               height="150"
-              class="blue lighten-1 text-center"
+              class="text-center"
+              color="#0078c9"
           >
-            <v-card-text>
-              <v-btn
-                  v-for="(icon,index) in icons"
-                  :key="icon"
-                  class="mx-4"
-                  icon
-              >
-                <div v-if="index ===  0 ">
-                  <router-link to="/">
-                    <v-icon size="24px">
-                      {{ icon }}
-                    </v-icon>
-                  </router-link>
-
-                </div>
-              </v-btn>
-            </v-card-text>
             <router-link to="/contact">
-              <v-chip light  color="white" style="font-size:20px; cursor:pointer;">Контакт</v-chip>
+              <h6 class="mt-10"  style="font-size:20px; cursor:pointer; color:white; text-transform:uppercase; text-decoration: underline">Контакт</h6>
             </router-link>
-            <v-card-text class="white--text mt-5">
+            <v-card-text class="white--text mt-5" style="font-size:20px;">
               {{ new Date().getFullYear() }} — <strong>Веником &#169; Сите права се задржани</strong>
             </v-card-text>
           </v-card>
         </v-footer>
-      </v-card>
+
     </div>
   </div>
 

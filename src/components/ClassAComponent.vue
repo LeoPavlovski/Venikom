@@ -270,29 +270,13 @@
             tile
             width="100%"
             height="150"
-            class="blue lighten-1 text-center"
+            class="text-center"
+            color="#0078c9"
         >
-          <v-card-text>
-            <v-btn
-                v-for="(icon,index) in icons"
-                :key="icon"
-                class="mx-4"
-                icon
-            >
-              <div v-if="index ===  0 ">
-                <router-link to="/">
-                  <v-icon size="24px">
-                    {{ icon }}
-                  </v-icon>
-                </router-link>
-
-              </div>
-            </v-btn>
-          </v-card-text>
           <router-link to="/contact">
-            <v-chip light  color="white" style="font-size:20px; cursor:pointer;">Контакт</v-chip>
+            <h6 class="mt-10"  style="font-size:20px; cursor:pointer; color:white; text-transform:uppercase; text-decoration: underline">Контакт</h6>
           </router-link>
-          <v-card-text class="white--text mt-5">
+          <v-card-text class="white--text mt-5" style="font-size:20px;">
             {{ new Date().getFullYear() }} — <strong>Веником &#169; Сите права се задржани</strong>
           </v-card-text>
         </v-card>

@@ -205,7 +205,10 @@ export default defineComponent({
     vuetify() {
       return vuetify
     }
-  }
+  },
+  mounted() {
+    window.scrollTo(0, 0)
+  },
 })
 
 </script>

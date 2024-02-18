@@ -119,40 +119,34 @@
     <div class="mt-10">
       <v-row>
         <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
-          <v-card class="d-flex align-center" style="flex: 1;">
-            <div class="flex-grow-1 ml-2">
-              <img src="../../public/venikom slike/ZA TIM U ABOUT US.jpg" style="width:100%;">
+            <div>
+              <img src="../../public/venikom slike/proizvodi/TARGET PHOTO.png" width="auto" height="500">
             </div>
-            <div class="flex-grow-1" >
+            <div class="flex-grow-1">
               <v-card-text style="font-size:20px;">
                 Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
               </v-card-text>
             </div>
-          </v-card>
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
-          <v-card class="d-flex align-center" style="flex: 1;">
-            <div class="flex-grow-1 ml-2" >
-              <img src="../../public/venikom slike/za TEHNOLOGIJA U ABOUT US.jpg" style="width:100%; height: 100%">
+            <div>
+              <img src="../../public/venikom slike/proizvodi/TEHNOLOGIJA SLIKA.png" width="auto" height="500">
             </div>
             <div class="flex-grow-1">
               <v-card-text style="font-size:20px;">
-                Фармата е лоцирана во исклучително еколошки чиста и здрава средина, во ненаселено место на патот од Челопек кон Брвеница. Вени Ком поседува и класирен центар за сортирање и пакување на јајца, како и сопствена дистрибутивна мрежа која дистрибуира свежи јајца на територијата на Македонија.
+                Фармата е лоцирана во исклучително еколошки чиста и здрава средина, во ненаселено место на патот од Челопек кон Брвеница. Вени Ком поседува и класирен центар за сортирање и пакување на јајца.
               </v-card-text>
             </div>
-          </v-card>
         </v-col>
         <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
-          <v-card class="d-flex align-center" style="flex: 1;">
-            <div class="flex-grow-1 ml-2">
-              <img src="../../public/venikom slike/ZA U ABOUT US ZA 3 KARTA 'CEL'.jpg" style="width:100%;">
+            <div>
+              <img src="../../public/venikom slike/proizvodi/TIM PHOTO.png" height="500" width="auto">
             </div>
-            <div class="flex-grow-1"  >
+            <div class="flex-grow-1">
               <v-card-text style="font-size:20px;">
                 Во склоп на фармата има и погон за производство на сточна храна за сопствени потреби. Храната со која се храни живината е квалитетна и здрава, редовно се испитува и ги исполнува највисоките стандарди за производство пропишани од надлежните институции.
               </v-card-text>
             </div>
-          </v-card>
         </v-col>
       </v-row>
       <div v-if="$vuetify.breakpoint.xs" class="my-5">
@@ -230,6 +224,9 @@ export default{
       }
       return attrs
     },
+  },
+  mounted() {
+    window.scrollTo(0, 0)
   },
 }
 </script>

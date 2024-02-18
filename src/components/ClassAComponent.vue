@@ -315,6 +315,9 @@ export default {
     this.buttonClicked = !this.buttonClicked;
   }
   },
+  mounted() {
+    window.scrollTo(0, 0)
+  },
   computed:{
 
   },

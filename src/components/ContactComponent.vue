@@ -151,7 +151,7 @@
 
             <!-- Contact Form Section -->
             <v-col cols="12" md="8">
-              <form action="https://formspree.io/f/xnqepdlw" method="POST">
+              <form>
                 <v-row class="d-flex align-center justify-space-between">
                   <v-col xs="12" sm="6" md="6">
                     <v-text-field  v-model="name" color="#09aa8e" label="Вашето Име" class="px-10"></v-text-field>
@@ -193,6 +193,9 @@ export default{
       email: '',
       message: '',
     }
+  },
+  mounted() {
+    window.scrollTo(0, 0)
   },
   methods:{
     sendEmail() {

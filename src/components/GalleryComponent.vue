@@ -436,6 +436,9 @@ export default {
       console.log(`Clicked on ${item}`);
     },
   },
+  mounted() {
+    window.scrollTo(0, 0)
+  },
   computed: {
     localAttrs () {
       const attrs = {}

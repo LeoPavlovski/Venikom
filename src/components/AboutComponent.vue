@@ -118,35 +118,13 @@
 
     <div class="mt-10">
       <v-row>
-        <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
-            <div>
-              <img src="../../public/venikom slike/proizvodi/TARGET PHOTO.png" width="auto" height="500">
-            </div>
-            <div class="flex-grow-1">
-              <v-card-text style="font-size:20px;">
-                Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден.
-              </v-card-text>
-            </div>
-        </v-col>
-        <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
-            <div>
-              <img src="../../public/venikom slike/proizvodi/TEHNOLOGIJA SLIKA.png" width="auto" height="500">
-            </div>
-            <div class="flex-grow-1">
-              <v-card-text style="font-size:20px;">
-                Фармата е лоцирана во исклучително еколошки чиста и здрава средина, во ненаселено место на патот од Челопек кон Брвеница. Вени Ком поседува и класирен центар за сортирање и пакување на јајца.
-              </v-card-text>
-            </div>
-        </v-col>
-        <v-col cols="12" sm="12" md="12" lg="4" style="display: flex; flex-direction: column;">
-            <div>
-              <img src="../../public/venikom slike/proizvodi/TIM PHOTO.png" height="500" width="auto">
-            </div>
-            <div class="flex-grow-1">
-              <v-card-text style="font-size:20px;">
-                Во склоп на фармата има и погон за производство на сточна храна за сопствени потреби. Храната со која се храни живината е квалитетна и здрава, редовно се испитува и ги исполнува највисоките стандарди за производство пропишани од надлежните институции.
-              </v-card-text>
-            </div>
+        <v-col v-for="(item, index) in items" :key="index" cols="12" xs="12" md="12" sm="12" lg="4" xl="4" >
+          <v-card class="position-relative" elevation="10" style="padding:20px;">
+            <v-img  :src="item.imageSrc" height="600px" style=" position:relative; height: 600px;object-position: top 30%; object-fit:cover;"></v-img>
+            <v-card-text style="height:200px;" :style="{height : $vuetify.breakpoint.lg ? '200px' : $vuetify.breakpoint.xl ? '150px' :''}">
+              <h6 style="font-size:17px; color:black;">{{ item.text }}</h6>
+            </v-card-text>
+          </v-card>
         </v-col>
       </v-row>
       <div v-if="$vuetify.breakpoint.xs" class="my-5">
@@ -192,6 +170,23 @@ export default{
   data(){
     return{
       drawer:false,
+      items: [
+        {
+          imageSrc: require("../../public/venikom slike/pilty.png"),
+          imagePosition: '50% 50%', // Adjust the position as needed (e.g., 'center center', 'top right', 'bottom left', etc.)
+          text: "Вени-Ком ДООЕЛ како компанија започна да работи во 2003та година. Компанијата располага со сопствена живинарска фарма за производство на висококвалитетни свежи конзумни јајца од кокошка со капацитет од 24.000 јајца на ден."
+        },
+        {
+          imageSrc: require("../../public/venikom slike/photo-1541329444622-e85b1a8980df.png"),
+          imagePosition: 'center center', // Adjust the position as needed
+          text: "Фармата е лоцирана во исклучително еколошки чиста и здрава средина, во ненаселено место на патот од Челопек кон Брвеница. Вени Ком поседува и класирен центар за сортирање и пакување на јајца."
+        },
+        {
+          imageSrc: require("../../public/venikom slike/photo-1463164490908-f45da921edde.png"),
+          imagePosition: 'top right', // Adjust the position as needed
+          text: "Во склоп на фармата има и погон за производство на сточна храна за сопствени потреби. Храната со која се храни живината е квалитетна и здрава, редовно се испитува и ги исполнува највисоките стандарди за производство пропишани од надлежните институции."
+        }
+      ]
     }
   },
   methods:{

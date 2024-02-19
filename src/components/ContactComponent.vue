@@ -199,12 +199,7 @@ export default{
   },
   methods:{
     sendEmail() {
-      const subject = 'Subject of the email';
-      const body = `Name: ${this.name}%0D%0AEmail: ${this.email}%0D%0AMessage: ${this.message}`;
-
-      console.log(body);
-
-      const mailtoLink = `mailto:lp29379@seeu.edu.mk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoLink = `mailto:lp29379@seeu.edu.mk`;
 
       window.location.href = mailtoLink;
     },
